@@ -58,7 +58,7 @@
     <nav class="max-w-3xl mx-auto mt-6 px-4 flex overflow-x-auto space-x-3 pb-2 hide-scrollbar">
         <button onclick="switchTab('tab-financije', this)" class="nav-btn px-5 py-2.5 bg-teal-600 text-white rounded-xl shadow-md font-bold whitespace-nowrap transition-all"><i class="fa-solid fa-coins mr-2"></i>Troškovi</button>
         <button onclick="switchTab('tab-plan', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-map-location-dot mr-2"></i>Plan & Hoteli</button>
-        <button onclick="switchTab('tab-ljekarna', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-suitcase-medical mr-2"></i>Ifkina Ljekarna</button>
+        <button onclick="switchTab('tab-ljekarna', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-suitcase-medical mr-2"></i>Ljekarna</button>
         <button onclick="switchTab('tab-info', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-link mr-2"></i>Važni Linkovi</button>
     </nav>
 
@@ -79,6 +79,7 @@
                         <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 font-bold text-sm">€</span>
                     </div>
                 </div>
+                <p class="text-[10px] text-slate-400 mt-2 text-center">Okvirni tečaj: 1 EUR = ~17.200 IDR</p>
             </div>
 
             <div class="glass-card p-5 mb-5">
@@ -103,53 +104,115 @@
                     </table>
                 </div>
             </div>
-
             <div class="glass-card p-5 border-l-4 border-l-teal-500 bg-gradient-to-br from-white to-teal-50 shadow-lg">
                 <h2 class="text-md font-bold text-slate-800 mb-3"><i class="fa-solid fa-wallet text-teal-600 mr-2"></i>Džeparac & Lokalni Trošak</h2>
                 <div class="grid grid-cols-2 gap-4 mb-4">
                     <div class="bg-white p-3 rounded-xl border border-teal-100 shadow-sm"><p class="text-[9px] font-bold text-slate-400 uppercase">Dnevno dvoje</p><p class="text-2xl font-black text-teal-700">~ 70 €</p></div>
                     <div class="bg-white p-3 rounded-xl border border-teal-100 shadow-sm"><p class="text-[9px] font-bold text-slate-400 uppercase">Total (15d)</p><p class="text-2xl font-black text-teal-800">~ 1.050 €</p></div>
                 </div>
-                <p class="text-[11px] text-slate-500 italic text-center">Uključuje: hranu, koktele, masaže i suvenire.</p>
+                <div class="space-y-2 text-sm text-slate-600 bg-white p-3 rounded-xl border border-slate-100">
+                    <p class="flex justify-between items-center"><span class="flex items-center"><i class="fa-solid fa-utensils w-5 text-slate-400"></i> Ručak (Nasi Goreng)</span> <span class="font-medium text-slate-800">~ 15-20 €</span></p>
+                    <p class="flex justify-between items-center"><span class="flex items-center"><i class="fa-solid fa-wine-glass w-5 text-slate-400"></i> Večera (bolji restoran)</span> <span class="font-medium text-slate-800">~ 30-40 €</span></p>
+                    <p class="flex justify-between items-center"><span class="flex items-center"><i class="fa-solid fa-spa w-5 text-slate-400"></i> Masaža (1 sat)</span> <span class="font-medium text-slate-800">~ 10-15 € / osobi</span></p>
+                    <p class="flex justify-between items-center"><span class="flex items-center"><i class="fa-solid fa-martini-glass-citrus w-5 text-slate-400"></i> Koktel u beach baru</span> <span class="font-medium text-slate-800">~ 7-10 € / kom</span></p>
+                </div>
             </div>
         </section>
 
         <section id="tab-plan" class="tab-content">
-            
             <div class="glass-card p-5 mb-5 relative overflow-hidden text-sm">
                 <div class="absolute right-0 top-0 w-32 h-full opacity-10" style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=400&q=80'); background-size: cover; background-position: center; mask-image: linear-gradient(to right, transparent, black); -webkit-mask-image: linear-gradient(to right, transparent, black);"></div>
-                <h2 class="font-bold text-slate-800 mb-4 border-b pb-3 relative z-10 uppercase tracking-tighter">Vaš Smještaj</h2>
+                <h2 class="font-bold text-slate-800 mb-4 border-b pb-3 relative z-10 uppercase tracking-tighter"><div class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mr-3 inline-flex"><i class="fa-solid fa-hotel"></i></div>Vaš Smještaj</h2>
                 <div class="space-y-3 relative z-10">
-                    <a href="https://all.accor.com/hotel/8593/index.en.shtml" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white border border-slate-200 rounded-xl shadow-sm"><span class="flex items-center"><i class="fa-solid fa-bed mr-2 text-slate-400"></i>Ibis Styles Jakarta</span><i class="fa-solid fa-arrow-up-right-from-square text-indigo-500"></i></a>
-                    <a href="https://www.marriott.com/en-us/hotels/dpstp-sthala-a-tribute-portfolio-hotel-ubud-bali/overview/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white border border-teal-200 rounded-xl shadow-sm font-bold text-teal-700"><span><i class="fa-solid fa-leaf mr-2 text-emerald-500"></i>Sthala, Ubud Marriott</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    <a href="https://marcgilitrawangan.com/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white border border-slate-200 rounded-xl shadow-sm"><span class="flex items-center"><i class="fa-solid fa-water mr-2 text-cyan-400"></i>Marc Hotel Gili</span><i class="fa-solid fa-arrow-up-right-from-square text-indigo-500"></i></a>
-                    <a href="https://www.marriott.com/en-us/hotels/dpsfi-fairfield-bali-legian/overview/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white border border-orange-200 rounded-xl shadow-sm font-bold text-orange-600"><span><i class="fa-solid fa-umbrella-beach mr-2"></i>Fairfield, Legian Marriott</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://all.accor.com/hotel/8593/index.en.shtml" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white/90 backdrop-blur border border-slate-200 rounded-xl shadow-sm"><span class="flex items-center"><i class="fa-solid fa-bed mr-2 text-slate-400"></i>Ibis Styles Jakarta</span><i class="fa-solid fa-arrow-up-right-from-square text-indigo-500"></i></a>
+                    <a href="https://www.marriott.com/en-us/hotels/dpstp-sthala-a-tribute-portfolio-hotel-ubud-bali/overview/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white/90 backdrop-blur border border-emerald-200 rounded-xl shadow-sm font-bold text-emerald-700"><span><i class="fa-solid fa-leaf mr-2 text-emerald-500"></i>Sthala, Ubud Marriott</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://marcgilitrawangan.com/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white/90 backdrop-blur border border-cyan-200 rounded-xl shadow-sm font-bold text-cyan-700"><span class="flex items-center"><i class="fa-solid fa-water mr-2 text-cyan-400"></i>Marc Hotel Gili</span><i class="fa-solid fa-arrow-up-right-from-square text-indigo-500"></i></a>
+                    <a href="https://www.marriott.com/en-us/hotels/dpsfi-fairfield-bali-legian/overview/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white/90 backdrop-blur border border-orange-200 rounded-xl shadow-sm font-bold text-orange-600"><span><i class="fa-solid fa-umbrella-beach mr-2"></i>Fairfield, Legian Marriott</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
             <div class="glass-card p-5 mb-5 bg-slate-900 text-white border-none shadow-2xl relative overflow-hidden">
                 <div class="absolute -right-4 -top-4 text-7xl opacity-10"><i class="fa-solid fa-rocket"></i></div>
                 <h2 class="text-lg font-extrabold mb-4 text-teal-400 flex items-center uppercase tracking-widest font-black"><i class="fa-solid fa-clock-rotate-left mr-2"></i>Time Warp Analiza</h2>
-                <div class="space-y-6">
-                    <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
-                        <h3 class="text-xs font-black uppercase text-rose-400 tracking-widest mb-3 flex justify-between">Odlazak (Let na Istok) <span class="warp-badge warp-red uppercase text-[9px]">Gubite vrijeme</span></h3>
-                        <div class="space-y-2 text-[10px]">
-                            <div class="flex justify-between border-b border-white/10 pb-1"><span>ZAG ➔ IST</span><span class="font-bold">2h 15m <span class="warp-badge warp-red ml-1">+3h 15m</span></span></div>
-                            <div class="flex justify-between border-b border-white/10 pb-1"><span>IST ➔ CGK</span><span class="font-bold">11h 35m <span class="warp-badge warp-red ml-1">+15h 35m</span></span></div>
-                            <div class="flex justify-between"><span>CGK ➔ DPS</span><span class="font-bold">1h 50m <span class="warp-badge warp-red ml-1">+2h 50m</span></span></div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden shadow-sm">
+                        <div class="bg-rose-500/20 px-4 py-2 border-b border-white/10 flex justify-between items-center">
+                            <h3 class="font-bold text-rose-300 text-sm"><i class="fa-solid fa-plane-departure mr-1.5"></i> Odlazak (ZAG ➔ DPS)</h3>
+                            <span class="text-[10px] font-mono text-white/50 bg-black/20 px-1.5 py-0.5 rounded border border-white/10">ZAG ➔ IST ➔ CGK ➔ DPS</span>
                         </div>
-                        <div class="mt-4 p-3 bg-white/10 rounded-xl border border-white/5 italic text-[10px] text-slate-300 text-center">
-                            Ukupno <strong class="text-white font-black text-base">15h 40m</strong> u zraku, ali na satu prolazi <strong class="text-rose-400 font-black text-base">22+ sata</strong>.
+                        
+                        <div class="p-4">
+                            <table class="w-full text-xs text-white/80 mb-3">
+                                <thead>
+                                    <tr class="text-left text-white/40 border-b border-white/10">
+                                        <th class="pb-1 font-medium">Dionica</th>
+                                        <th class="pb-1 font-medium">Lokalno vrijeme</th>
+                                        <th class="pb-1 font-medium text-right">U zraku</th>
+                                        <th class="pb-1 font-medium text-right">Warp (Sat)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-white/5">
+                                    <tr>
+                                        <td class="py-1.5 font-medium text-white">ZAG ➔ IST</td>
+                                        <td class="py-1.5">20:00 ➔ 23:15</td>
+                                        <td class="py-1.5 text-right">2h 15m</td>
+                                        <td class="py-1.5 text-right"><span class="warp-badge warp-red">+3h 15m</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1.5 font-medium text-white">IST ➔ CGK</td>
+                                        <td class="py-1.5">02:20 ➔ 17:55</td>
+                                        <td class="py-1.5 text-right">11h 35m</td>
+                                        <td class="py-1.5 text-right"><span class="warp-badge warp-red">+15h 35m</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-1.5 font-medium text-white">CGK ➔ DPS</td>
+                                        <td class="py-1.5">Jutro ➔ 11:30</td>
+                                        <td class="py-1.5 text-right">1h 50m</td>
+                                        <td class="py-1.5 text-right"><span class="warp-badge warp-red">+2h 50m</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <div class="grid grid-cols-2 gap-2 mb-3">
+                                <div class="bg-black/20 p-2 rounded-lg text-center border border-white/5">
+                                    <span class="block text-[10px] text-white/50 uppercase font-semibold">Ukupno u zraku</span>
+                                    <span class="font-bold text-white">~15h 40m</span>
+                                </div>
+                                <div class="bg-rose-500/20 p-2 rounded-lg text-center border border-rose-500/30">
+                                    <span class="block text-[10px] text-rose-300 uppercase font-semibold">Osjećaj na satu</span>
+                                    <span class="font-bold text-rose-400">22h+</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
-                        <h3 class="text-xs font-black uppercase text-emerald-400 tracking-widest mb-3 flex justify-between">Povratak (Let na Zapad) <span class="warp-badge warp-green uppercase text-[9px]">Dobitak vremena</span></h3>
-                        <div class="flex justify-between items-center text-center">
-                            <div class="w-1/2 border-r border-white/10 p-2"><p class="text-[9px] uppercase opacity-50 font-bold mb-1">Stvarno u zraku</p><p class="text-lg font-black tracking-tighter">~15h 00m</p></div>
-                            <div class="w-1/2 p-2"><p class="text-[9px] uppercase opacity-50 font-bold mb-1">Warp na satu</p><p class="text-lg font-black text-emerald-400">~9h 00m <span class="warp-badge warp-green ml-1">-6h</span></p></div>
+
+                    <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden shadow-sm">
+                        <div class="bg-emerald-500/20 px-4 py-2 border-b border-white/10 flex justify-between items-center">
+                            <h3 class="font-bold text-emerald-300 text-sm"><i class="fa-solid fa-plane-arrival mr-1.5"></i> Povratak (DPS ➔ ZAG)</h3>
+                            <span class="text-[10px] font-mono text-white/50 bg-black/20 px-1.5 py-0.5 rounded border border-white/10">DPS ➔ CGK ➔ IST ➔ ZAG</span>
                         </div>
-                        <div class="mt-4 p-2 bg-emerald-500/10 rounded-xl border border-emerald-500/20 italic text-[11px] text-emerald-300 text-center font-bold">
-                            U Zagreb slijećete ujutro tek par sati nakon polaska s Balija!
+                        
+                        <div class="p-4">
+                            <div class="flex items-center justify-between mb-3 text-xs border-b border-white/10 pb-2">
+                                <span class="text-white/60">Polazak: <strong class="text-white">Večer (20.05.)</strong></span>
+                                <i class="fa-solid fa-arrow-right text-white/30"></i>
+                                <span class="text-white/60">Dolazak: <strong class="text-white">08:15 (21.05.)</strong></span>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-2 mb-3">
+                                <div class="bg-black/20 p-2 rounded-lg text-center border border-white/5">
+                                    <span class="block text-[10px] text-white/50 uppercase font-semibold">Stvarno u zraku</span>
+                                    <span class="font-bold text-white">~15h 00m</span>
+                                </div>
+                                <div class="bg-emerald-500/20 p-2 rounded-lg text-center border border-emerald-500/30">
+                                    <span class="block text-[10px] text-emerald-400 uppercase font-semibold">Vremenski Warp</span>
+                                    <span class="font-bold text-emerald-300 flex items-center justify-center gap-1">~9h 00m <span class="warp-badge warp-green">-6h</span></span>
+                                </div>
+                            </div>
+                            <div class="mt-2 p-2 bg-emerald-500/10 rounded-xl border border-emerald-500/20 italic text-[11px] text-emerald-300 text-center font-bold">
+                                U Zagreb slijećete ujutro tek par sati nakon polaska s Balija!
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -240,102 +303,62 @@
             </div>
             
             <div class="glass-card p-5">
-                <div class="flex justify-between items-center mb-6 border-b pb-3">
-                    <h2 class="text-lg font-bold text-slate-800 flex items-center uppercase"><i class="fa-solid fa-suitcase-medical text-teal-600 mr-2"></i>Ifkina Ljekarna</h2>
-                    <div class="flex space-x-1 text-[9px] uppercase font-bold text-slate-400">
-                        <span class="bg-slate-100 px-1 py-0.5 rounded">1. Treba</span>
-                        <span class="bg-amber-100 text-amber-700 px-1 py-0.5 rounded">2. Kupljeno</span>
-                        <span class="bg-emerald-100 text-emerald-700 px-1 py-0.5 rounded">3. Kofer</span>
-                    </div>
-                </div>
-
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center border-b pb-3 uppercase"><i class="fa-solid fa-suitcase-medical text-teal-600 mr-2"></i>Ifkina Putna Poliklinika (Original)</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     
                     <div class="bg-teal-50/30 p-4 rounded-2xl border border-teal-100 shadow-sm">
                         <h3 class="font-black text-teal-800 mb-3 text-[10px] uppercase tracking-wider border-b border-teal-100 pb-1">Želudac & Probava</h3>
                         <div class="space-y-2">
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-ugljen" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium item-text">Aktivni ugljen (kod sumnje na trovanje)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-probiotik" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-rose-600 font-bold underline item-text">Probiotici (S. boulardii) - piti 7d prije!</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-seldiar" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium item-text">Seldiar / Imodium (zaustavljanje proljeva)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-rehidromiks" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium italic item-text">Rehidromiks & <b>Pocari Sweat</b> (kupi tamo!)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-dramina" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium item-text">Dramina / Đumbir bomboni (za brod)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-ugljen" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Aktivni ugljen (kod sumnje na trovanje)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-probiotik" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-bold underline item-text">Probiotici (S. boulardii) - piti 7d prije!</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-seldiar" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Seldiar / Imodium (zaustavljanje proljeva)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-rehidromiks" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium italic item-text">Rehidromiks & <b>Pocari Sweat</b> (kupi tamo!)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-dramina" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Dramina / Đumbir bomboni (za brod)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
                         </div>
                     </div>
 
                     <div class="bg-rose-50/30 p-4 rounded-2xl border border-rose-100 shadow-sm">
                         <h3 class="font-black text-rose-800 mb-3 text-[10px] uppercase tracking-wider border-b border-rose-100 pb-1">Bolovi, Rane & Alergije</h3>
                         <div class="space-y-2">
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-paracetamol" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium item-text">Tablete za bolove & <b>Paracetamol</b> (Lupocet)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-antiseptik" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium item-text">Antiseptik sprej & Tyrosur mast</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-flasteri" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium item-text">Flasteri, gaze & Claritine (alergija)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-kapioci" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium item-text">Kapi za oči & Krema protiv svrbeža</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-bolove" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Tablete za bolove & <b>Paracetamol</b> (Lupocet)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-sprej" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Antiseptik sprej & Tyrosur mast</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-flasteri" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Flasteri, gaze & Claritine (alergija)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-kapi" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Kapi za oči & Krema protiv svrbeža</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
                         </div>
                     </div>
 
                     <div class="bg-blue-50/30 p-4 rounded-2xl border border-blue-100 shadow-sm">
                         <h3 class="font-black text-blue-800 mb-3 text-[10px] uppercase tracking-wider border-b border-blue-100 pb-1">Vene & Dugi letovi</h3>
                         <div class="space-y-2">
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-carape" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium item-text">Kompresivne čarape - Class 1 (za let)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-venotonici" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium item-text">Venotonici za noge (gel kesten/loza)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-flavonoidi" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium item-text">Tablete s flavonoidima (priprema vena)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-carape" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Kompresivne čarape - Class 1 (za let)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-veno" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Venotonici za noge (gel kesten/loza)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-flavo" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Tablete s flavonoidima (priprema vena)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
                         </div>
                     </div>
 
                     <div class="bg-amber-50/30 p-4 rounded-2xl border border-amber-100 shadow-sm">
                         <h3 class="font-black text-amber-800 mb-3 text-[10px] uppercase tracking-wider border-b border-amber-100 pb-1">Zaštita & Specijalno</h3>
                         <div class="space-y-2">
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-repelent" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium item-text">Tropski sprej protiv komaraca (DEET 30+)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-spf" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium item-text">SPF 50+ & Gel nakon sunčanja (Kupi u HR!)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-canesten" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium item-text">Canesten & Linex Lady (Lady Guard)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
-                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-operil" data-state="0" onclick="toggleState(this)">
-                                <span class="text-xs text-slate-700 font-medium italic underline item-text">Operil / Herplex / Dezinfekcija ruku</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-komarci" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Tropski sprej protiv komaraca (DEET 30+)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-spf" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">SPF 50+ & Gel nakon sunčanja (Kupi u HR!)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-canesten" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Canesten & Linex Lady (Lady Guard)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-operil" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium italic underline item-text">Operil / Herplex / Dezinfekcija ruku</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="mt-6 bg-purple-50/30 p-4 rounded-2xl border border-purple-100 shadow-sm">
                     <h3 class="font-black text-purple-800 mb-3 text-[10px] uppercase tracking-widest border-b border-purple-100 pb-1"><i class="fa-solid fa-pump-soap mr-2"></i>Higijena, Ljepota & Nakit</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-maramice" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Vlažne anti. maramice & Šminka out</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-dezic" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Dezić & Parfem (mini)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-pasta" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Pasta & Četkice & Britvica</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-sapun" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Sapun za tuš & Štapići uši</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-sampon" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Šampon u sapunu & Maska kosu</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-sminka" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Maskara, Ruž, Sjajilo</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-nakit" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Nakit (Osnovno) & Četka</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-kovrce" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Oblikovanje kovrča</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-recepti" data-state="0" onclick="toggleState(this)"><span class="text-[11px] font-black text-rose-600 item-text">REDOVNI LIJEKOVI (RECEPT)!</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-maramice" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Vlažne anti. maramice & Šminka out</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-dezic" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Dezić & Parfem (mini)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-pasta" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Pasta & Četkice & Britvica</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-sapun" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Sapun za tuš & Štapići uši</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-sampon" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Šampon u sapunu & Maska kosu</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-sminka" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Maskara, Ruž, Sjajilo</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-nakit" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Nakit (Osnovno) & Četka</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-kovrce" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Oblikovanje kovrča</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-recepti" data-state="0" onclick="toggleState(this)"><span class="text-[10px] font-black text-rose-600 item-text">REDOVNI LIJEKOVI (RECEPT)!</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
                     </div>
                 </div>
             </div>
@@ -385,6 +408,7 @@
             btnElement.className = 'nav-btn px-5 py-2.5 bg-teal-600 text-white rounded-xl shadow-md font-bold whitespace-nowrap transition-all';
         }
 
+        // Pametni Timer (Fiksna Zona Zagreb - UTC+2)
         function updateCountdown() {
             const departureDate = new Date('2026-05-06T18:00:00+02:00').getTime();
             const now = new Date().getTime();
@@ -417,6 +441,7 @@
                 if(days > 5){ badge.classList.remove('animate-pulse'); }
             }
         }
+
         updateCountdown();
         setInterval(updateCountdown, 60000);
 
@@ -438,7 +463,7 @@
             idrInput.value = Math.round(rawValue * tecaj).toLocaleString('id-ID'); 
         }
 
-        // Ljekarna (Pametna stanja)
+        // Pametna Ljekarna (Spremanje u memoriju)
         function toggleState(el) {
             let currentState = parseInt(el.getAttribute('data-state'));
             let newState = (currentState + 1) % 3;
@@ -450,7 +475,6 @@
         function renderStates() {
             document.querySelectorAll('.pharmacy-item').forEach(el => {
                 let id = el.getAttribute('data-id');
-                // Povuci iz memorije ako nema data-state
                 let savedState = localStorage.getItem(id);
                 if (savedState !== null) { el.setAttribute('data-state', savedState); }
                 
@@ -458,15 +482,15 @@
                 let textEl = el.querySelector('.item-text');
                 let badge = el.querySelector('.status-badge');
                 
-                el.className = `flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item ${state === '0' ? 'border-slate-100 bg-white hover:bg-slate-50' : state === '1' ? 'border-amber-200 bg-amber-50' : 'border-emerald-200 bg-emerald-50'}`;
+                el.className = `flex items-center justify-between p-2.5 rounded-lg border cursor-pointer transition-all pharmacy-item ${state === '0' ? 'border-slate-100 bg-white hover:bg-slate-50' : state === '1' ? 'border-amber-200 bg-amber-50' : 'border-emerald-200 bg-emerald-50'}`;
 
                 if (state === "0") {
                     badge.innerHTML = "";
-                    badge.className = "status-badge";
+                    badge.className = "status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all";
                     textEl.style.textDecoration = "none";
                     textEl.style.opacity = "1";
                 } else if (state === "1") {
-                    badge.innerHTML = "<i class='fa-solid fa-cart-shopping'></i> Kupili";
+                    badge.innerHTML = "<i class='fa-solid fa-cart-shopping'></i> Kupljeno";
                     badge.className = "status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all bg-amber-200 text-amber-800";
                     textEl.style.textDecoration = "none";
                     textEl.style.opacity = "1";
@@ -479,15 +503,16 @@
             });
         }
         
-        // Renderiraj po učitavanju
         document.addEventListener("DOMContentLoaded", () => {
             renderStates();
         });
 
-        // Registracija SW
+        // Registracija PWA Service Workera
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW Err: ', err));
+                navigator.serviceWorker.register('./sw.js').catch(err => {
+                    console.log('SW registracija preskočena');
+                });
             });
         }
     </script>
