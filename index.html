@@ -18,25 +18,20 @@
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
         
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; color: #1e293b; }
-
         .tab-content { display: none; opacity: 0; transform: translateY(10px); transition: opacity 0.3s ease, transform 0.3s ease; }
         .tab-content.active { display: block; opacity: 1; transform: translateY(0); }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(226, 232, 240, 0.8); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); border-radius: 1.5rem;
-        }
-
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(226, 232, 240, 0.8); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); border-radius: 1.5rem; }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
         .header-gradient {
             background: linear-gradient(135deg, rgba(15, 118, 110, 0.9) 0%, rgba(6, 78, 59, 0.95) 100%), url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=80');
             background-size: cover; background-position: center 30%; background-blend-mode: overlay;
         }
 
-        .warp-badge { color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.65rem; font-weight: bold; }
-        .warp-red { background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); box-shadow: 0 2px 4px rgba(225, 29, 72, 0.3); }
-        .warp-green { background: linear-gradient(135deg, #10b981 0%, #059669 100%); box-shadow: 0 2px 4px rgba(5, 150, 105, 0.3); }
+        .warp-badge { color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.65rem; font-weight: bold; text-transform: uppercase; }
+        .warp-red { background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); }
+        .warp-green { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
     </style>
 </head>
 <body class="pb-24">
@@ -44,27 +39,27 @@
     <header class="header-gradient text-white pt-8 pb-6 px-5 rounded-b-[2.5rem] shadow-xl sticky top-0 z-50">
         <div class="max-w-3xl mx-auto relative z-10">
             <div class="flex justify-between items-center mb-4">
-                <div class="bg-black/30 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full flex items-center shadow-inner border border-white/20">
-                    <i class="fa-solid fa-clock mr-1.5"></i> 16 Dana
+                <div class="bg-black/30 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1.5 rounded-full flex items-center shadow-inner border border-white/20 uppercase tracking-widest">
+                    <i class="fa-solid fa-plane mr-1.5"></i> 16 Dana Total
                 </div>
-                <div id="countdown-badge" class="bg-emerald-500/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg border border-emerald-400 animate-pulse transition-all">
+                <div id="countdown-badge" class="bg-emerald-500/90 backdrop-blur-sm text-white text-[10px] font-black px-3 py-1.5 rounded-full shadow-lg border border-emerald-400 animate-pulse uppercase tracking-wider">
                     <i class="fa-solid fa-hourglass-half mr-1"></i> Učitavanje...
                 </div>
             </div>
             <div>
                 <h1 class="text-3xl font-extrabold tracking-tight mb-1 drop-shadow-md">Bali & Gili <span class="text-teal-200">2026</span></h1>
                 <p class="text-teal-50 font-medium text-sm flex items-center drop-shadow-md">
-                    <i class="fa-solid fa-gift mr-2 text-pink-300"></i> Ifkin 40. rođendan (06.05. - 21.05.)
+                    <i class="fa-solid fa-gift mr-2 text-pink-300 animate-bounce"></i> Ifkin 40. rođendan (06.05. - 21.05.)
                 </p>
             </div>
         </div>
     </header>
 
     <nav class="max-w-3xl mx-auto mt-6 px-4 flex overflow-x-auto space-x-3 pb-2 hide-scrollbar">
-        <button onclick="switchTab('tab-financije', this)" class="nav-btn px-5 py-2.5 bg-teal-600 text-white rounded-xl shadow-md font-semibold whitespace-nowrap transition-all"><i class="fa-solid fa-coins mr-2"></i>Troškovi</button>
-        <button onclick="switchTab('tab-plan', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-medium whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-map-location-dot mr-2"></i>Plan & Hoteli</button>
-        <button onclick="switchTab('tab-ljekarna', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-medium whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-suitcase-medical mr-2"></i>Ljekarna</button>
-        <button onclick="switchTab('tab-info', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-medium whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-link mr-2"></i>Važni Linkovi</button>
+        <button onclick="switchTab('tab-financije', this)" class="nav-btn px-5 py-2.5 bg-teal-600 text-white rounded-xl shadow-md font-bold whitespace-nowrap transition-all"><i class="fa-solid fa-coins mr-2"></i>Troškovi</button>
+        <button onclick="switchTab('tab-plan', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-map-location-dot mr-2"></i>Plan & Hoteli</button>
+        <button onclick="switchTab('tab-ljekarna', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-suitcase-medical mr-2"></i>Ifkina Ljekarna</button>
+        <button onclick="switchTab('tab-info', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-link mr-2"></i>Važni Linkovi</button>
     </nav>
 
     <main class="max-w-3xl mx-auto mt-4 px-4">
@@ -84,7 +79,6 @@
                         <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 font-bold text-sm">€</span>
                     </div>
                 </div>
-                <p class="text-[10px] text-slate-400 mt-2 text-center">Okvirni tečaj: 1 EUR = ~17.200 IDR</p>
             </div>
 
             <div class="glass-card p-5 mb-5">
@@ -93,289 +87,304 @@
                 </h2>
                 <div class="overflow-hidden rounded-xl border border-slate-200 bg-white">
                     <table class="w-full text-sm text-left">
-                        <thead class="bg-slate-50 text-slate-600 text-xs uppercase tracking-wider">
-                            <tr><th class="p-3 font-semibold border-b">Stavka</th><th class="p-3 font-semibold border-b text-right">Zrina</th><th class="p-3 font-bold border-b text-right bg-teal-50 text-teal-800">Skupa</th></tr>
+                        <thead class="bg-slate-50 text-slate-600 text-xs uppercase">
+                            <tr><th class="p-3">Stavka</th><th class="p-3 text-right">Zrina</th><th class="p-3 text-right bg-teal-50 text-teal-800 font-bold">Oboje</th></tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-100">
-                            <tr><td class="p-3"><span class="inline-block w-5 text-center text-emerald-500 mr-1"><i class="fa-solid fa-check"></i></span> Aranžman Jungle Tribe</td><td class="p-3 text-right">1.690,00 €</td><td class="p-3 text-right font-bold bg-teal-50/30 text-slate-800">3.380,00 €</td></tr>
-                            <tr><td class="p-3"><span class="inline-block w-5 text-center text-emerald-500 mr-1"><i class="fa-solid fa-check"></i></span> UNIQA Osiguranje</td><td class="p-3 text-right">82,06 €</td><td class="p-3 text-right font-bold bg-teal-50/30 text-slate-800">164,12 €</td></tr>
-                            <tr class="bg-amber-50/50"><td class="p-3"><span class="inline-block w-5 text-center text-amber-500 mr-1"><i class="fa-solid fa-passport"></i></span> <b>Viza (e-VoA)</b></td><td class="p-3 text-right text-amber-700">~30,00 €</td><td class="p-3 text-right font-bold text-amber-800 bg-amber-100/40">~60,00 €</td></tr>
-                            <tr class="bg-amber-50/50"><td class="p-3"><span class="inline-block w-5 text-center text-amber-500 mr-1"><i class="fa-solid fa-leaf"></i></span> <b>LoveBali Taksa</b></td><td class="p-3 text-right text-amber-700">~9,00 €</td><td class="p-3 text-right font-bold text-amber-800 bg-amber-100/40">~18,00 €</td></tr>
-                            <tr><td class="p-3 font-medium"><span class="inline-block w-5 text-center text-blue-500 mr-1"><i class="fa-solid fa-map"></i></span> Fakultativni Izleti</td><td class="p-3 text-right font-semibold text-blue-700">285,00 €</td><td class="p-3 text-right font-bold text-blue-800 bg-blue-50/50">570,00 €</td></tr>
+                        <tbody class="divide-y divide-slate-100 text-[13px]">
+                            <tr><td class="p-3"><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Aranžman Jungle Tribe</td><td class="p-3 text-right">1.690 €</td><td class="p-3 text-right font-bold text-teal-900">3.380 €</td></tr>
+                            <tr><td class="p-3"><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> UNIQA Polica (Grupna)</td><td class="p-3 text-right">82,06 €</td><td class="p-3 text-right font-bold text-teal-900">164,12 €</td></tr>
+                            <tr class="bg-amber-50/50"><td class="p-3 font-bold text-amber-800"><i class="fa-solid fa-passport mr-1"></i> e-Viza (VoA)</td><td class="p-3 text-right">~30 €</td><td class="p-3 text-right font-bold text-amber-800">~60 €</td></tr>
+                            <tr class="bg-amber-50/50"><td class="p-3 font-bold text-amber-800"><i class="fa-solid fa-leaf mr-1"></i> LoveBali Taksa</td><td class="p-3 text-right">~9 €</td><td class="p-3 text-right font-bold text-amber-800">~18 €</td></tr>
+                            <tr><td class="p-3 font-bold text-blue-700"><i class="fa-solid fa-map mr-1"></i> Svih 6 Izleta</td><td class="p-3 text-right">285 €</td><td class="p-3 text-right font-bold text-blue-800">570 €</td></tr>
                         </tbody>
                         <tfoot class="bg-slate-800 text-white">
-                            <tr><td class="p-4 font-bold text-sm">UKUPNO</td><td class="p-4 text-right font-bold text-sm">2.096,06 €</td><td class="p-4 text-right font-extrabold text-lg text-teal-300">4.192,12 €</td></tr>
+                            <tr><td class="p-4 font-bold text-sm uppercase">Ukupno Fiksno</td><td class="p-4 text-right font-bold">2.096 €</td><td class="p-4 text-right font-black text-lg text-teal-300">4.192 €</td></tr>
                         </tfoot>
                     </table>
                 </div>
             </div>
-            
-            <div class="glass-card p-5 border-l-4 border-l-teal-500">
-                <h2 class="text-lg font-bold text-slate-800 mb-3 flex items-center"><i class="fa-solid fa-wallet text-slate-400 mr-2"></i>Dnevni Džeparac</h2>
-                <div class="grid grid-cols-2 gap-3 mb-4">
-                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200"><span class="block text-[11px] text-slate-500 uppercase font-semibold">Preporuka po danu</span><span class="text-xl font-bold text-teal-700">~ 70 €</span><span class="block text-[10px] text-slate-400">Za vas oboje</span></div>
-                    <div class="bg-teal-50 p-3 rounded-xl border border-teal-100"><span class="block text-[11px] text-teal-600 uppercase font-semibold">Cijelo putovanje</span><span class="text-xl font-bold text-teal-800">~ 1.050 €</span><span class="block text-[10px] text-teal-500">Hrana, kokteli, masaže</span></div>
+
+            <div class="glass-card p-5 border-l-4 border-l-teal-500 bg-gradient-to-br from-white to-teal-50 shadow-lg">
+                <h2 class="text-md font-bold text-slate-800 mb-3"><i class="fa-solid fa-wallet text-teal-600 mr-2"></i>Džeparac & Lokalni Trošak</h2>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div class="bg-white p-3 rounded-xl border border-teal-100 shadow-sm"><p class="text-[9px] font-bold text-slate-400 uppercase">Dnevno dvoje</p><p class="text-2xl font-black text-teal-700">~ 70 €</p></div>
+                    <div class="bg-white p-3 rounded-xl border border-teal-100 shadow-sm"><p class="text-[9px] font-bold text-slate-400 uppercase">Total (15d)</p><p class="text-2xl font-black text-teal-800">~ 1.050 €</p></div>
                 </div>
-                <div class="space-y-2 text-sm text-slate-600 bg-white p-3 rounded-xl border border-slate-100">
-                    <p class="flex justify-between items-center"><span class="flex items-center"><i class="fa-solid fa-utensils w-5 text-slate-400"></i> Ručak (Nasi Goreng)</span> <span class="font-medium text-slate-800">~ 15-20 €</span></p>
-                    <p class="flex justify-between items-center"><span class="flex items-center"><i class="fa-solid fa-wine-glass w-5 text-slate-400"></i> Večera (bolji restoran)</span> <span class="font-medium text-slate-800">~ 30-40 €</span></p>
-                    <p class="flex justify-between items-center"><span class="flex items-center"><i class="fa-solid fa-spa w-5 text-slate-400"></i> Masaža (1 sat)</span> <span class="font-medium text-slate-800">~ 10-15 € / osobi</span></p>
-                    <p class="flex justify-between items-center"><span class="flex items-center"><i class="fa-solid fa-martini-glass-citrus w-5 text-slate-400"></i> Koktel u beach baru</span> <span class="font-medium text-slate-800">~ 7-10 € / kom</span></p>
-                </div>
+                <p class="text-[11px] text-slate-500 italic text-center">Uključuje: hranu, koktele, masaže i suvenire.</p>
             </div>
         </section>
 
         <section id="tab-plan" class="tab-content">
-            <div class="glass-card p-5 mb-5 relative overflow-hidden">
+            
+            <div class="glass-card p-5 mb-5 relative overflow-hidden text-sm">
                 <div class="absolute right-0 top-0 w-32 h-full opacity-10" style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=400&q=80'); background-size: cover; background-position: center; mask-image: linear-gradient(to right, transparent, black); -webkit-mask-image: linear-gradient(to right, transparent, black);"></div>
-                <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center border-b border-slate-100 pb-3 relative z-10"><div class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mr-3"><i class="fa-solid fa-hotel"></i></div>Vaš Smještaj</h2>
+                <h2 class="font-bold text-slate-800 mb-4 border-b pb-3 relative z-10 uppercase tracking-tighter">Vaš Smještaj</h2>
                 <div class="space-y-3 relative z-10">
-                    <a href="https://all.accor.com/hotel/8593/index.en.shtml" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 hover:border-indigo-300 bg-white/90 backdrop-blur-sm transition-all shadow-sm group">
-                        <div class="flex items-center"><div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 mr-3"><i class="fa-solid fa-plane-arrival"></i></div><div><h3 class="font-bold text-slate-800 text-sm group-hover:text-indigo-600 transition-colors">Ibis Styles Jakarta Airport <span class="text-amber-400 text-[10px] ml-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></h3><p class="text-[11px] text-slate-500">1 noć | Odmor od leta</p></div></div><i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-indigo-500 transition-colors"></i>
-                    </a>
-                    <a href="https://www.marriott.com/en-us/hotels/dpstp-sthala-a-tribute-portfolio-hotel-ubud-bali/overview/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 hover:border-indigo-300 bg-white/90 backdrop-blur-sm transition-all shadow-sm group">
-                        <div class="flex items-center"><div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 mr-3"><i class="fa-solid fa-leaf"></i></div><div><h3 class="font-bold text-slate-800 text-sm group-hover:text-indigo-600 transition-colors">Sthala, Tribute Portfolio <span class="text-amber-400 text-[10px] ml-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></h3><p class="text-[11px] text-slate-500">5 noći | Ubud (Džungla)</p></div></div><i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-indigo-500 transition-colors"></i>
-                    </a>
-                    <a href="https://marcgilitrawangan.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 hover:border-indigo-300 bg-white/90 backdrop-blur-sm transition-all shadow-sm group">
-                        <div class="flex items-center"><div class="w-10 h-10 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-500 mr-3"><i class="fa-solid fa-water"></i></div><div><h3 class="font-bold text-slate-800 text-sm group-hover:text-indigo-600 transition-colors">Marc Hotel Gili <span class="text-amber-400 text-[10px] ml-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></h3><p class="text-[11px] text-slate-500">2 noći | Gili Trawangan</p></div></div><i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-indigo-500 transition-colors"></i>
-                    </a>
-                    <a href="https://www.marriott.com/en-us/hotels/dpsfi-fairfield-bali-legian/overview/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 hover:border-indigo-300 bg-white/90 backdrop-blur-sm transition-all shadow-sm group">
-                        <div class="flex items-center"><div class="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-orange-500 mr-3"><i class="fa-solid fa-umbrella-beach"></i></div><div><h3 class="font-bold text-slate-800 text-sm group-hover:text-indigo-600 transition-colors">Fairfield by Marriott <span class="text-amber-400 text-[10px] ml-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></h3><p class="text-[11px] text-slate-500">5 noći | Legian (Plaža, Zalasci)</p></div></div><i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-indigo-500 transition-colors"></i>
-                    </a>
+                    <a href="https://all.accor.com/hotel/8593/index.en.shtml" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white border border-slate-200 rounded-xl shadow-sm"><span class="flex items-center"><i class="fa-solid fa-bed mr-2 text-slate-400"></i>Ibis Styles Jakarta</span><i class="fa-solid fa-arrow-up-right-from-square text-indigo-500"></i></a>
+                    <a href="https://www.marriott.com/en-us/hotels/dpstp-sthala-a-tribute-portfolio-hotel-ubud-bali/overview/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white border border-teal-200 rounded-xl shadow-sm font-bold text-teal-700"><span><i class="fa-solid fa-leaf mr-2 text-emerald-500"></i>Sthala, Ubud Marriott</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://marcgilitrawangan.com/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white border border-slate-200 rounded-xl shadow-sm"><span class="flex items-center"><i class="fa-solid fa-water mr-2 text-cyan-400"></i>Marc Hotel Gili</span><i class="fa-solid fa-arrow-up-right-from-square text-indigo-500"></i></a>
+                    <a href="https://www.marriott.com/en-us/hotels/dpsfi-fairfield-bali-legian/overview/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white border border-orange-200 rounded-xl shadow-sm font-bold text-orange-600"><span><i class="fa-solid fa-umbrella-beach mr-2"></i>Fairfield, Legian Marriott</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
-            <div class="glass-card p-5 mb-5">
-                <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center border-b border-slate-100 pb-3">
-                    <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mr-3"><i class="fa-solid fa-clock-rotate-left"></i></div>
-                    Time Warp Analiza
-                </h2>
-                
-                <div class="space-y-4">
-                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-                        <div class="bg-rose-50 px-4 py-2 border-b border-slate-200 flex justify-between items-center">
-                            <h3 class="font-bold text-rose-700 text-sm"><i class="fa-solid fa-plane-departure mr-1.5"></i> Odlazak (ZAG ➔ DPS)</h3>
-                            <span class="text-[10px] font-mono text-slate-500 bg-white px-1.5 py-0.5 rounded border border-slate-200">ZAG ➔ IST ➔ CGK ➔ DPS</span>
+            <div class="glass-card p-5 mb-5 bg-slate-900 text-white border-none shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 text-7xl opacity-10"><i class="fa-solid fa-rocket"></i></div>
+                <h2 class="text-lg font-extrabold mb-4 text-teal-400 flex items-center uppercase tracking-widest font-black"><i class="fa-solid fa-clock-rotate-left mr-2"></i>Time Warp Analiza</h2>
+                <div class="space-y-6">
+                    <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                        <h3 class="text-xs font-black uppercase text-rose-400 tracking-widest mb-3 flex justify-between">Odlazak (Let na Istok) <span class="warp-badge warp-red uppercase text-[9px]">Gubite vrijeme</span></h3>
+                        <div class="space-y-2 text-[10px]">
+                            <div class="flex justify-between border-b border-white/10 pb-1"><span>ZAG ➔ IST</span><span class="font-bold">2h 15m <span class="warp-badge warp-red ml-1">+3h 15m</span></span></div>
+                            <div class="flex justify-between border-b border-white/10 pb-1"><span>IST ➔ CGK</span><span class="font-bold">11h 35m <span class="warp-badge warp-red ml-1">+15h 35m</span></span></div>
+                            <div class="flex justify-between"><span>CGK ➔ DPS</span><span class="font-bold">1h 50m <span class="warp-badge warp-red ml-1">+2h 50m</span></span></div>
                         </div>
-                        
-                        <div class="p-4">
-                            <table class="w-full text-xs text-slate-600 mb-3">
-                                <thead>
-                                    <tr class="text-left text-slate-400 border-b border-slate-100">
-                                        <th class="pb-1 font-medium">Dionica</th>
-                                        <th class="pb-1 font-medium">Lokalno vrijeme</th>
-                                        <th class="pb-1 font-medium text-right">U zraku</th>
-                                        <th class="pb-1 font-medium text-right">Warp (Sat)</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-slate-50">
-                                    <tr>
-                                        <td class="py-1.5 font-medium text-slate-700">ZAG ➔ IST</td>
-                                        <td class="py-1.5">20:00 ➔ 23:15</td>
-                                        <td class="py-1.5 text-right">2h 15m</td>
-                                        <td class="py-1.5 text-right"><span class="warp-badge warp-red">+3h 15m</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1.5 font-medium text-slate-700">IST ➔ CGK</td>
-                                        <td class="py-1.5">02:20 ➔ 17:55</td>
-                                        <td class="py-1.5 text-right">11h 35m</td>
-                                        <td class="py-1.5 text-right"><span class="warp-badge warp-red">+15h 35m</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1.5 font-medium text-slate-700">CGK ➔ DPS</td>
-                                        <td class="py-1.5">Jutro ➔ 11:30</td>
-                                        <td class="py-1.5 text-right">1h 50m</td>
-                                        <td class="py-1.5 text-right"><span class="warp-badge warp-red">+2h 50m</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            
-                            <div class="grid grid-cols-2 gap-2 mb-3">
-                                <div class="bg-slate-50 p-2 rounded-lg text-center border border-slate-100">
-                                    <span class="block text-[10px] text-slate-500 uppercase font-semibold">Ukupno u zraku</span>
-                                    <span class="font-bold text-slate-700">~15h 40m</span>
-                                </div>
-                                <div class="bg-rose-50 p-2 rounded-lg text-center border border-rose-100">
-                                    <span class="block text-[10px] text-rose-500 uppercase font-semibold">Osjećaj na satu</span>
-                                    <span class="font-bold text-rose-700">22h+</span>
-                                </div>
-                            </div>
-                            <p class="text-[10px] text-slate-500 italic bg-slate-50 p-2 rounded border border-slate-100">Zbog gubitka vremena pri letu na istok, dan će vam se činiti znatno dužim. Pripremite se na jet-lag!</p>
+                        <div class="mt-4 p-3 bg-white/10 rounded-xl border border-white/5 italic text-[10px] text-slate-300 text-center">
+                            Ukupno <strong class="text-white font-black text-base">15h 40m</strong> u zraku, ali na satu prolazi <strong class="text-rose-400 font-black text-base">22+ sata</strong>.
                         </div>
                     </div>
-
-                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-                        <div class="bg-emerald-50 px-4 py-2 border-b border-slate-200 flex justify-between items-center">
-                            <h3 class="font-bold text-emerald-700 text-sm"><i class="fa-solid fa-plane-arrival mr-1.5"></i> Povratak (DPS ➔ ZAG)</h3>
-                            <span class="text-[10px] font-mono text-slate-500 bg-white px-1.5 py-0.5 rounded border border-slate-200">DPS ➔ CGK ➔ IST ➔ ZAG</span>
+                    <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                        <h3 class="text-xs font-black uppercase text-emerald-400 tracking-widest mb-3 flex justify-between">Povratak (Let na Zapad) <span class="warp-badge warp-green uppercase text-[9px]">Dobitak vremena</span></h3>
+                        <div class="flex justify-between items-center text-center">
+                            <div class="w-1/2 border-r border-white/10 p-2"><p class="text-[9px] uppercase opacity-50 font-bold mb-1">Stvarno u zraku</p><p class="text-lg font-black tracking-tighter">~15h 00m</p></div>
+                            <div class="w-1/2 p-2"><p class="text-[9px] uppercase opacity-50 font-bold mb-1">Warp na satu</p><p class="text-lg font-black text-emerald-400">~9h 00m <span class="warp-badge warp-green ml-1">-6h</span></p></div>
                         </div>
-                        
-                        <div class="p-4">
-                            <div class="flex items-center justify-between mb-3 text-xs border-b border-slate-100 pb-2">
-                                <span class="text-slate-500">Polazak: <strong class="text-slate-700">Večer (20.05.)</strong></span>
-                                <i class="fa-solid fa-arrow-right text-slate-300"></i>
-                                <span class="text-slate-500">Dolazak: <strong class="text-slate-700">08:15 (21.05.)</strong></span>
-                            </div>
-                            
-                            <div class="grid grid-cols-2 gap-2 mb-3">
-                                <div class="bg-slate-50 p-2 rounded-lg text-center border border-slate-100">
-                                    <span class="block text-[10px] text-slate-500 uppercase font-semibold">Stvarno u zraku</span>
-                                    <span class="font-bold text-slate-700">~15h 00m</span>
-                                </div>
-                                <div class="bg-emerald-50 p-2 rounded-lg text-center border border-emerald-100">
-                                    <span class="block text-[10px] text-emerald-600 uppercase font-semibold">Vremenski Warp</span>
-                                    <span class="font-bold text-emerald-700 flex items-center justify-center gap-1">~9h 00m <span class="warp-badge warp-green">-6h</span></span>
-                                </div>
-                            </div>
-                            <p class="text-[10px] text-slate-500 italic bg-slate-50 p-2 rounded border border-slate-100">Iako letite 15 sati, u Zagreb slijećete samo 9 sati kasnije na satu jer se vraćate "unazad" kroz vrijeme!</p>
+                        <div class="mt-4 p-2 bg-emerald-500/10 rounded-xl border border-emerald-500/20 italic text-[11px] text-emerald-300 text-center font-bold">
+                            U Zagreb slijećete ujutro tek par sati nakon polaska s Balija!
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="glass-card p-5">
-                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center border-b border-slate-100 pb-3">
-                    <div class="w-8 h-8 rounded-full bg-rose-100 text-rose-500 flex items-center justify-center mr-3"><i class="fa-solid fa-route"></i></div>Dnevni Plan
-                </h2>
-                <div class="relative border-l-2 border-teal-200 ml-4 space-y-6 pb-2">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center border-b pb-3 uppercase"><i class="fa-solid fa-route text-rose-500 mr-2"></i>Dnevni Plan Aktivnosti</h2>
+                <div class="relative border-l-2 border-teal-200 ml-4 space-y-8 pb-4">
                     
                     <div class="pl-6 relative">
-                        <div class="absolute w-4 h-4 bg-teal-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
-                        <span class="text-[10px] font-bold text-teal-600 uppercase tracking-widest bg-teal-50 px-2 py-0.5 rounded-md inline-block mb-1">06.05. - 08.05.</span>
-                        <h3 class="font-bold text-slate-800 text-sm mt-1">Tranzit & Dolazak</h3>
-                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">Let iz ZG (Srijeda 18h). Spavanje u Jakarti. Dolazak u Sthala Hotel (Ubud) u petak.</p>
+                        <div class="absolute w-4 h-4 bg-slate-400 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
+                        <span class="text-[9px] font-black text-slate-500 uppercase bg-slate-100 px-2 py-1 rounded mb-1 inline-block">Dan 01-03 | Tranzit</span>
+                        <h3 class="font-bold text-sm text-slate-800">Polazak & Jakarta</h3>
+                        <p class="text-[11px] text-slate-500 mt-1">Let preko Istanbula, odmor u Jakarti i dolazak u džunglu Ubuda (Sthala Hotel).</p>
                     </div>
 
                     <div class="pl-6 relative">
                         <div class="absolute w-4 h-4 bg-emerald-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
-                        <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest bg-emerald-50 px-2 py-0.5 rounded-md inline-block mb-1">09.05. - 12.05.</span>
-                        <h3 class="font-bold text-slate-800 text-sm mt-1">Ubud: Akcija i Džungla</h3>
-                        <ul class="text-xs text-slate-600 mt-2 space-y-1.5">
-                            <li class="flex items-start"><i class="fa-solid fa-camera text-teal-500 mt-0.5 mr-2 w-4"></i> <div><b>09.05.</b> Slapovi Kanto Lampo, Goa Gajah, Cretya klub ljuljačke.</div></li>
-                            <li class="flex items-start"><i class="fa-solid fa-vihara text-emerald-500 mt-0.5 mr-2 w-4"></i> <div><b>10.05.</b> Besakih hram (Vulkan Agung), Tirtagangga palača.</div></li>
-                            <li class="flex items-start"><i class="fa-solid fa-monkey text-amber-600 mt-0.5 mr-2 w-4"></i> <div><b>11.05.</b> Rafting, Šuma Majmuna (čuvaj stvari!), Park Ptica.</div></li>
-                            <li class="flex items-start"><i class="fa-solid fa-mug-hot text-orange-400 mt-0.5 mr-2 w-4"></i> <div><b>12.05.</b> Slobodan dan za hotel i chill.</div></li>
+                        <span class="text-[9px] font-black text-emerald-600 uppercase bg-emerald-50 px-2 py-1 rounded mb-1 inline-block">Dan 04-07 | Ubud: Džungla & Akcija</span>
+                        <ul class="text-[11px] text-slate-600 mt-2 space-y-3 font-medium">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-water text-teal-500 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Slapovi & Cretya:</b> Kanto Lampo, Goa Gajah hram i Cretya klub.<br>
+                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Slapovi i ljuljačke iznad riže.</span></div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-vihara text-emerald-500 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Besakih & Vulkan:</b> Majke hram Besakih, Tirtagangga palača i Virgin Beach.<br>
+                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Tirtagangga fontane i Besakih stepenice.</span></div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-monkey text-amber-600 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Rafting & Majmuni:</b> Rafting rijekom Ayung i Šuma majmuna.<br>
+                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Selfie s majmunima (čuvaj mobitel!).</span></div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-mug-hot text-orange-400 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Rest & Chill:</b> Slobodan dan za masaže i bazen u hotelu Sthala.</div>
+                            </li>
                         </ul>
                     </div>
 
                     <div class="pl-6 relative">
                         <div class="absolute w-4 h-4 bg-cyan-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
-                        <span class="text-[10px] font-bold text-cyan-600 uppercase tracking-widest bg-cyan-50 px-2 py-0.5 rounded-md inline-block mb-1">13.05. - 14.05.</span>
-                        <h3 class="font-bold text-slate-800 text-sm mt-1">Gili Otoci: Reset</h3>
-                        <p class="text-xs text-slate-600 mt-1 leading-relaxed"><i class="fa-solid fa-ship text-cyan-500 mr-1"></i> Transfer brzim brodom. Nema auta, samo pijesak, kornjače i ronjenje.</p>
+                        <span class="text-[9px] font-black text-cyan-600 uppercase bg-cyan-50 px-2 py-1 rounded mb-1 inline-block">Dan 08-09 | Gili: Kornjače & Reset</span>
+                        <p class="text-[11px] text-slate-600 mt-1 leading-relaxed italic">
+                            <i class="fa-solid fa-ship text-cyan-500 mr-1"></i> Gliserom do Gilija. Nema motora, samo bicikli i kornjače.<br>
+                            <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Zalasci na ljuljačkama u moru.</span>
+                        </p>
                     </div>
 
                     <div class="pl-6 relative">
                         <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
-                        <span class="text-[10px] font-bold text-orange-600 uppercase tracking-widest bg-orange-50 px-2 py-0.5 rounded-md inline-block mb-1">15.05. - 19.05.</span>
-                        <h3 class="font-bold text-slate-800 text-sm mt-1">Legian: Zalasci i Plaža</h3>
-                        <ul class="text-xs text-slate-600 mt-2 space-y-1.5">
-                            <li class="flex items-start"><i class="fa-solid fa-martini-glass-citrus text-orange-400 mt-0.5 mr-2 w-4"></i> <div><b>16.05.</b> Tanah Lot hram, Finns Beach Club.</div></li>
-                            <li class="flex items-start"><i class="fa-solid fa-fire text-red-500 mt-0.5 mr-2 w-4"></i> <div><b>17.05.</b> Uluwatu, Melasti plaža, Kecak ples vatre.</div></li>
-                            <li class="flex items-start"><i class="fa-solid fa-utensils text-rose-400 mt-0.5 mr-2 w-4"></i> <div><b>18.05.</b> Nusa Dua luksuz, večera na pijesku (Jimbaran).</div></li>
-                            <li class="flex items-start"><i class="fa-solid fa-bag-shopping text-purple-500 mt-0.5 mr-2 w-4"></i> <div><b>19.05.</b> Slobodan dan za shopping i masaže.</div></li>
+                        <span class="text-[9px] font-black text-orange-600 uppercase bg-orange-50 px-2 py-1 rounded mb-1 inline-block">Dan 10-15 | Legian: Plaža & Ritualia</span>
+                        <ul class="text-[11px] text-slate-600 mt-2 space-y-3 font-medium">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-martini-glass-citrus text-orange-400 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Tanah Lot:</b> Legendarni hram u moru i Finns Beach Club.<br>
+                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Hram na hridi u sumrak.</span></div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-fire text-red-500 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Uluwatu:</b> Litice, Melasti plaža i Kecak ples vatre.<br>
+                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Litice Uluwatua (Top fotka!).</span></div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-utensils text-rose-400 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Nusa Dua & Jimbaran:</b> Čamci i večera na pijesku uz more.<br>
+                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Večera uz svijeće na Jimbaranu.</span></div>
+                            </li>
                         </ul>
                     </div>
 
                     <div class="pl-6 relative">
                         <div class="absolute w-4 h-4 bg-slate-800 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
-                        <span class="text-[10px] font-bold text-slate-600 uppercase tracking-widest bg-slate-100 px-2 py-0.5 rounded-md inline-block mb-1">20.05. - 21.05.</span>
-                        <h3 class="font-bold text-slate-800 text-sm mt-1">Povratak</h3>
-                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">Let s Balija preko Jakarte i Istanbula. Dolazak u ZG (Četvrtak ujutro).</p>
+                        <span class="text-[9px] font-black text-slate-600 uppercase bg-slate-100 px-2 py-1 rounded mb-1 inline-block">Dan 16 | Povratak Doma</span>
+                        <h3 class="font-bold text-sm text-slate-800">Dolazak u Bistru 🏠</h3>
                     </div>
-
                 </div>
             </div>
         </section>
 
         <section id="tab-ljekarna" class="tab-content">
-            <div class="bg-rose-50 border-l-4 border-rose-500 p-4 mb-5 rounded-r-xl shadow-sm">
-                <h3 class="font-bold text-rose-800 text-sm uppercase tracking-wide mb-1"><i class="fa-solid fa-triangle-exclamation mr-2"></i>Kritično: Denga Upozorenje</h3>
-                <p class="text-xs text-rose-700 mt-1 leading-relaxed">U slučaju visoke temperature <b>ZABRANJENO JE</b> piti Aspirin, Ibuprofen (Neofen) ili Ketonal (rizik od krvarenja). Dozvoljen je <b>ISKLJUČIVO PARACETAMOL</b> (Lupocet, Lekadol).</p>
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-5 rounded-r-xl shadow-lg relative overflow-hidden">
+                <div class="absolute right-0 top-0 text-3xl opacity-10 p-2"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <h3 class="font-black text-rose-800 text-[11px] uppercase tracking-widest mb-1">Denga & Bali Belly Guard</h3>
+                <p class="text-xs text-rose-700 leading-relaxed font-bold italic underline">ZABRANJENI: Aspirin, Ibuprofen, Ketonal. DOZVOLJEN ISKLJUČIVO: PARACETAMOL!</p>
             </div>
             
             <div class="glass-card p-5">
-                <div class="flex justify-between items-center mb-4 border-b border-slate-100 pb-3">
-                    <h2 class="text-lg font-bold text-slate-800"><i class="fa-solid fa-kit-medical text-teal-600 mr-2"></i>Ifkina Poliklinika</h2>
-                    <div class="flex space-x-2 text-[10px] uppercase font-bold text-slate-400">
-                        <span class="bg-slate-100 px-2 py-1 rounded">1. Treba</span>
-                        <span class="bg-amber-100 text-amber-700 px-2 py-1 rounded">2. Kupljeno</span>
-                        <span class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded">3. Kofer</span>
+                <div class="flex justify-between items-center mb-6 border-b pb-3">
+                    <h2 class="text-lg font-bold text-slate-800 flex items-center uppercase"><i class="fa-solid fa-suitcase-medical text-teal-600 mr-2"></i>Ifkina Ljekarna</h2>
+                    <div class="flex space-x-1 text-[9px] uppercase font-bold text-slate-400">
+                        <span class="bg-slate-100 px-1 py-0.5 rounded">1. Treba</span>
+                        <span class="bg-amber-100 text-amber-700 px-1 py-0.5 rounded">2. Kupljeno</span>
+                        <span class="bg-emerald-100 text-emerald-700 px-1 py-0.5 rounded">3. Kofer</span>
                     </div>
                 </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 pharmacy-grid">
-                    </div>
-            </div>
 
-            <div class="glass-card p-5 mt-5 bg-gradient-to-br from-indigo-50 to-purple-50 border-indigo-100">
-                <h3 class="font-bold text-indigo-800 text-sm mb-3 flex items-center"><i class="fa-solid fa-star text-amber-400 mr-2"></i>Zrinina "Pro-Tip" Preporuka</h3>
-                <ul class="text-xs text-indigo-900 space-y-2.5">
-                    <li class="flex items-start"><i class="fa-solid fa-pills mt-0.5 w-5 text-indigo-500"></i> <div><b>Melatonin:</b> Obavezno kupite. Sa 6 sati vremenske razlike, spasit će vas prve 2 noći.</div></li>
-                    <li class="flex items-start"><i class="fa-solid fa-glass-water mt-0.5 w-5 text-blue-500"></i> <div><b>Rehidromiks:</b> Bolji od bilo kojih drugih soli. Ako dobijete "Bali Belly", vraća iz mrtvih.</div></li>
-                    <li class="flex items-start"><i class="fa-solid fa-mosquito mt-0.5 w-5 text-rose-500"></i> <div><b>B-Kompleks:</b> Navodno znojenje viška B vitamina odbija tropske komarce. Počnite piti par dana prije puta!</div></li>
-                    <li class="flex items-start"><i class="fa-solid fa-bottle-droplet mt-0.5 w-5 text-emerald-500"></i> <div><b>Octenisept sprej:</b> Najbolji za dezinfekciju bilo kakve rane u džungli (ne peče i praktičan je).</div></li>
-                    <li class="flex items-start"><i class="fa-solid fa-bolt mt-0.5 w-5 text-amber-500"></i> <div><b>Magnezij Direkt:</b> Zbog silnog hodanja po Ubudu i plivanja, odličan za prevenciju grčeva mišića.</div></li>
-                </ul>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <div class="bg-teal-50/30 p-4 rounded-2xl border border-teal-100 shadow-sm">
+                        <h3 class="font-black text-teal-800 mb-3 text-[10px] uppercase tracking-wider border-b border-teal-100 pb-1">Želudac & Probava</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-ugljen" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium item-text">Aktivni ugljen (kod sumnje na trovanje)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-probiotik" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-rose-600 font-bold underline item-text">Probiotici (S. boulardii) - piti 7d prije!</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-seldiar" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium item-text">Seldiar / Imodium (zaustavljanje proljeva)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-rehidromiks" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium italic item-text">Rehidromiks & <b>Pocari Sweat</b> (kupi tamo!)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-dramina" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium item-text">Dramina / Đumbir bomboni (za brod)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-rose-50/30 p-4 rounded-2xl border border-rose-100 shadow-sm">
+                        <h3 class="font-black text-rose-800 mb-3 text-[10px] uppercase tracking-wider border-b border-rose-100 pb-1">Bolovi, Rane & Alergije</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-paracetamol" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium item-text">Tablete za bolove & <b>Paracetamol</b> (Lupocet)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-antiseptik" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium item-text">Antiseptik sprej & Tyrosur mast</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-flasteri" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium item-text">Flasteri, gaze & Claritine (alergija)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-kapioci" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium item-text">Kapi za oči & Krema protiv svrbeža</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50/30 p-4 rounded-2xl border border-blue-100 shadow-sm">
+                        <h3 class="font-black text-blue-800 mb-3 text-[10px] uppercase tracking-wider border-b border-blue-100 pb-1">Vene & Dugi letovi</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-carape" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium item-text">Kompresivne čarape - Class 1 (za let)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-venotonici" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium item-text">Venotonici za noge (gel kesten/loza)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-flavonoidi" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium item-text">Tablete s flavonoidima (priprema vena)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50/30 p-4 rounded-2xl border border-amber-100 shadow-sm">
+                        <h3 class="font-black text-amber-800 mb-3 text-[10px] uppercase tracking-wider border-b border-amber-100 pb-1">Zaštita & Specijalno</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-repelent" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium item-text">Tropski sprej protiv komaraca (DEET 30+)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-spf" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium item-text">SPF 50+ & Gel nakon sunčanja (Kupi u HR!)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-canesten" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium item-text">Canesten & Linex Lady (Lady Guard)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-operil" data-state="0" onclick="toggleState(this)">
+                                <span class="text-xs text-slate-700 font-medium italic underline item-text">Operil / Herplex / Dezinfekcija ruku</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-purple-50/30 p-4 rounded-2xl border border-purple-100 shadow-sm">
+                    <h3 class="font-black text-purple-800 mb-3 text-[10px] uppercase tracking-widest border-b border-purple-100 pb-1"><i class="fa-solid fa-pump-soap mr-2"></i>Higijena, Ljepota & Nakit</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-maramice" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Vlažne anti. maramice & Šminka out</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-dezic" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Dezić & Parfem (mini)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-pasta" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Pasta & Četkice & Britvica</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-sapun" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Sapun za tuš & Štapići uši</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-sampon" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Šampon u sapunu & Maska kosu</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-sminka" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Maskara, Ruž, Sjajilo</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-nakit" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Nakit (Osnovno) & Četka</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-kovrce" data-state="0" onclick="toggleState(this)"><span class="text-[11px] text-slate-700 item-text">Oblikovanje kovrča</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item bg-white" data-id="med-recepti" data-state="0" onclick="toggleState(this)"><span class="text-[11px] font-black text-rose-600 item-text">REDOVNI LIJEKOVI (RECEPT)!</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="tab-info" class="tab-content">
             <div class="bg-indigo-600 text-white rounded-2xl p-6 mb-5 shadow-lg relative overflow-hidden">
                 <div class="absolute -right-6 -top-6 w-32 h-32 bg-white opacity-10 rounded-full blur-xl"></div>
-                <h2 class="text-lg font-bold mb-2 relative z-10"><i class="fa-solid fa-shield-halved mr-2"></i>UNIQA Osiguranje</h2>
-                <p class="text-indigo-100 text-xs mb-4 relative z-10">Grupna polica br: <b>7003090674</b> (Vi ste osiguranici pod rednim brojevima 1. i 2. - izjednačeno s obiteljskom policom).</p>
+                <h2 class="text-lg font-bold mb-2 relative z-10"><i class="fa-solid fa-shield-halved mr-2"></i>Osiguranje UNIQA</h2>
+                <p class="text-indigo-100 text-[10px] mb-4 relative z-10 font-bold uppercase tracking-wider">Polica: 7003090674 | Vi ste osiguranici pod rednim br. 1 i 2</p>
                 <div class="bg-white/10 rounded-xl p-4 flex justify-between items-center backdrop-blur-md border border-white/20 relative z-10">
-                    <div>
-                        <span class="block text-[10px] uppercase tracking-wider text-indigo-200 font-semibold mb-1">SOS Pomoć (0-24h)</span>
-                        <a href="tel:+3614653680" class="text-2xl font-black text-white hover:text-indigo-100 transition-colors">+36 1 465 36 80</a>
-                    </div>
-                    <div class="w-10 h-10 rounded-full bg-white text-indigo-600 flex items-center justify-center shadow-lg animate-bounce">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
+                    <div><span class="block text-[8px] uppercase tracking-widest text-indigo-200 font-bold mb-1">HITNA POMOĆ (0-24h)</span><a href="tel:+3614653680" class="text-2xl font-black text-white">+36 1 465 36 80</a></div>
+                    <div class="w-10 h-10 rounded-full bg-white text-indigo-600 flex items-center justify-center shadow-lg animate-bounce"><i class="fa-solid fa-phone"></i></div>
                 </div>
-                <div class="mt-4 bg-indigo-800/50 p-3 rounded-lg border border-indigo-500/50 relative z-10">
-                    <p class="text-[11px] text-indigo-100"><i class="fa-solid fa-camera mr-1.5 text-amber-300"></i><b>Pravilo za tehniku (Dron, GoPro):</b> UNIQA pokriva krađu OPREME samo ako se nalazi u vašoj <u class="font-bold">ručnoj prtljazi (kabini)</u>. Max iznos oko 166 €.</p>
+                <div class="mt-4 bg-black/20 p-3 rounded-lg border border-white/10 relative z-10 text-[10px]">
+                    <p class="text-indigo-100 leading-relaxed"><i class="fa-solid fa-camera mr-1 text-amber-300"></i><b>Važno za tehniku:</b> Krađa drona/GoPro je pokrivena SAMO ako je u <u>ručnoj prtljazi</u> (kabini)!</p>
                 </div>
             </div>
 
             <div class="glass-card p-6">
-                <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center border-b border-slate-100 pb-3">
-                    <div class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mr-3"><i class="fa-solid fa-link"></i></div>
-                    Hitni Zadaci i Plaćanja
-                </h2>
-                <p class="text-xs text-slate-500 mb-4">Kako ne biste gubili sate u redovima na aerodromu u Denpasaru, <b>riješite ove dvije stvari online 2-3 dana prije leta</b>.</p>
-                
-                <a href="https://indonesia-arrival.com/register/apply?gad_source=1&gad_campaignid=23161203811" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-amber-500 hover:bg-amber-600 text-white py-3.5 rounded-xl font-bold mb-3 transition-colors shadow-md group">
-                    <i class="fa-solid fa-passport mr-2 text-xl group-hover:scale-110 transition-transform"></i> Plati e-Vizu (e-VoA)
-                </a>
-                <a href="https://lovebali.baliprov.go.id/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-emerald-500 hover:bg-emerald-600 text-white py-3.5 rounded-xl font-bold mb-6 transition-colors shadow-md group">
-                    <i class="fa-solid fa-leaf mr-2 text-xl group-hover:scale-110 transition-transform"></i> Plati Turističku Taksu
-                </a>
-                
-                <h3 class="font-bold text-slate-700 text-sm mb-3">Lokalna Pravila Preživljavanja</h3>
-                <ul class="text-xs text-slate-600 space-y-2">
-                    <li class="flex items-start"><i class="fa-solid fa-battery-full text-emerald-500 mt-0.5 mr-2 w-4"></i> <div><b>Baterije:</b> Tvoj powerbank (20000mAh) i baterije od drona/GoPro-a MORAJU ići s tobom u kabinu. Zabranjeno u predanoj prtljazi.</div></li>
-                    <li class="flex items-start"><i class="fa-solid fa-droplet text-blue-400 mt-0.5 mr-2 w-4"></i> <div><b>Voda:</b> Nikada iz slavine. Koristite flaširanu čak i za pranje zubi.</div></li>
-                    <li class="flex items-start"><i class="fa-solid fa-wifi text-slate-800 mt-0.5 mr-2 w-4"></i> <div><b>Internet:</b> Prije polaska kupite e-SIM paket (npr. aplikacija Airalo).</div></li>
-                    <li class="flex items-start"><i class="fa-solid fa-taxi text-yellow-500 mt-0.5 mr-2 w-4"></i> <div><b>Prijevoz:</b> Instalirajte si aplikacije <b>Grab</b> i <b>Gojek</b>.</div></li>
-                    <li class="flex items-start"><i class="fa-solid fa-hand text-slate-400 mt-0.5 mr-2 w-4"></i> <div><b>Bonton:</b> Desna ruka za sve! Lijeva se smatra nečistom (ne dodavati stvari niti plaćati njome).</div></li>
-                </ul>
+                <h2 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-3 uppercase font-black">Online Plaćanja (2-3 dana prije leta)</h2>
+                <div class="space-y-4">
+                    <a href="https://indonesia-arrival.com/register/apply?gad_source=1&gad_campaignid=23161203811" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-amber-500 text-white py-4 rounded-2xl font-black shadow-lg hover:bg-amber-600 transition-colors uppercase text-sm tracking-widest"><i class="fa-solid fa-passport mr-3 text-xl"></i>Plati e-Vizu (e-VoA)</a>
+                    <a href="https://lovebali.baliprov.go.id/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-emerald-600 text-white py-4 rounded-2xl font-black shadow-lg hover:bg-emerald-700 transition-colors uppercase text-sm tracking-widest"><i class="fa-solid fa-leaf mr-3 text-xl"></i>LoveBali Taksa</a>
+                </div>
+                <div class="mt-8 border-t pt-6">
+                    <h3 class="text-xs font-black text-slate-800 uppercase tracking-widest mb-4">Pravila Preživljavanja</h3>
+                    <ul class="text-[11px] text-slate-600 space-y-4 font-medium leading-relaxed">
+                        <li class="flex items-start"><i class="fa-solid fa-droplet text-blue-400 mr-3 mt-1 text-base"></i> <div><b>VODA:</b> Ništa iz pipe, čak ni pranje zubi (koristi flaširanu). Led u barovima je OK, ali ne onaj mrvljeni na ulici.</div></li>
+                        <li class="flex items-start"><i class="fa-solid fa-battery-full text-emerald-600 mr-3 mt-1 text-base"></i> <div><b>BATERIJE:</b> Sve baterije (dron, GoPro) i Powerbank 20000mAh idu isključivo u kabinu (ruksak).</div></li>
+                        <li class="flex items-start"><i class="fa-solid fa-hand text-orange-400 mr-3 mt-1 text-base"></i> <div><b>DESNA RUKA:</b> Lijeva ruka je nečista. Plaćaj i pružaj stvari desnom rukom.</div></li>
+                        <li class="flex items-start"><i class="fa-solid fa-wifi text-indigo-500 mr-3 mt-1 text-base"></i> <div><b>INTERNET:</b> Airalo e-SIM kupite prije polaska, a Grab/Gojek aplikacije za taxi.</div></li>
+                    </ul>
+                </div>
             </div>
         </section>
 
     </main>
 
     <script>
-        // 1. Logika Tabova
         function switchTab(tabId, btnElement) {
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
-            document.querySelectorAll('.nav-btn').forEach(btn => btn.className = 'nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-medium whitespace-nowrap transition-all border border-slate-200');
-            btnElement.className = 'nav-btn px-5 py-2.5 bg-teal-600 text-white rounded-xl shadow-md font-semibold whitespace-nowrap transition-all';
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.className = 'nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200';
+            });
+            btnElement.className = 'nav-btn px-5 py-2.5 bg-teal-600 text-white rounded-xl shadow-md font-bold whitespace-nowrap transition-all';
         }
 
-        // 2. Pametni Timer
         function updateCountdown() {
             const departureDate = new Date('2026-05-06T18:00:00+02:00').getTime();
             const now = new Date().getTime();
@@ -383,96 +392,73 @@
 
             if (now >= departureDate) {
                 const returnDate = new Date('2026-05-21T08:15:00+02:00').getTime();
-                if(now > returnDate) {
-                     badge.innerHTML = '<i class="fa-solid fa-house-chimney mr-1"></i> Putovanje završeno';
-                     badge.className = 'bg-slate-500/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg border border-slate-400';
+                if(now > returnDate){
+                     badge.innerHTML = '<i class="fa-solid fa-house-chimney mr-1"></i> Bistra 🏠';
+                     badge.classList.remove('animate-pulse');
                 } else {
-                    badge.innerHTML = '<i class="fa-solid fa-plane-up mr-1"></i> Na Baliju!';
-                    badge.className = 'bg-orange-500/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg border border-orange-400 animate-pulse';
+                    const diffTime = Math.abs(now - departureDate);
+                    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                    badge.innerHTML = '<i class="fa-solid fa-plane-up mr-1"></i> Dan ' + diffDays + ' na Baliju!';
+                    badge.className = 'bg-orange-500 text-white text-[10px] font-black px-3 py-1.5 rounded-full shadow-lg border border-orange-400 animate-pulse uppercase';
                 }
             } else {
                 const distance = departureDate - now;
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                
                 if (days > 0) {
                     badge.innerHTML = '<i class="fa-solid fa-hourglass-half mr-1"></i> Još ' + days + ' dana!';
-                    if(days > 5) badge.classList.remove('animate-pulse');
                 } else {
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    badge.innerHTML = '<i class="fa-solid fa-hourglass-half mr-1"></i> Još ' + hours + 'h!';
-                    badge.className = 'bg-rose-500/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg border border-rose-400 animate-pulse';
+                    badge.innerHTML = '<i class="fa-solid fa-hourglass-half mr-1 text-yellow-300"></i> Još ' + hours + 'h ' + minutes + 'm!';
+                    badge.classList.add('bg-rose-500');
+                    badge.classList.remove('bg-emerald-500/90');
                 }
+                if(days > 5){ badge.classList.remove('animate-pulse'); }
             }
         }
-        updateCountdown(); setInterval(updateCountdown, 60000);
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
 
-        // 3. Valutni Kalkulator (Dvosmjerni)
+        // Kalkulator Valuta
         const tecaj = 17200;
-        
         function calcIDRtoEUR() {
             let idrInput = document.getElementById('idr-input');
             let eurInput = document.getElementById('eur-input');
             let rawValue = idrInput.value.replace(/\D/g, ''); 
-            
-            if(!rawValue) { 
-                eurInput.value = ''; 
-                idrInput.value = ''; 
-                return; 
-            }
-            
+            if(!rawValue) { eurInput.value = ''; idrInput.value = ''; return; }
             eurInput.value = (parseInt(rawValue) / tecaj).toFixed(2);
             idrInput.value = parseInt(rawValue).toLocaleString('id-ID');
         }
-
         function calcEURtoIDR() {
             let idrInput = document.getElementById('idr-input');
             let eurInput = document.getElementById('eur-input');
             let rawValue = parseFloat(eurInput.value);
-            
-            if(isNaN(rawValue)) { 
-                idrInput.value = ''; 
-                return; 
-            }
-            
-            let idrValue = Math.round(rawValue * tecaj);
-            idrInput.value = idrValue.toLocaleString('id-ID'); 
+            if(isNaN(rawValue)) { idrInput.value = ''; return; }
+            idrInput.value = Math.round(rawValue * tecaj).toLocaleString('id-ID'); 
         }
 
-        // 4. Ljekarna - Generiranje i 3-State Logika sa specifičnim imenima
-        const pharmacyData = [
-            { category: "Probava & Želudac", color: "teal", items: ["Aktivni ugljen", "Probiotici (S. boulardi) 🔴", "Seldiar / Imodium", "Rehidromiks (elektroliti)", "Dramina (za gliser)"] },
-            { category: "Bolovi, Rane & Alergije", color: "rose", items: ["Paracetamol (Denga!) 🔴", "Spazmex / Buscopan (grčevi)", "Octenisept sprej & Tyrosur mast", "Flasteri (vodootporni)", "Claritine/Telfast & Synopen/Fenistil", "Kapi za oči (klima)"] },
-            { category: "Vene & Putovanje", color: "blue", items: ["Kompresivne čarape (let)", "Venotonici (gel/tablete)", "Tablete s flavonoidima"] },
-            { category: "Ostalo & Specifično", color: "amber", items: ["Jaki repelent (DEET 30%+)", "SPF 50+ & Gel nakon sunčanja", "Krema protiv trenja (bedra)", "Canesten, Linex Lady, Tamponi", "Operil, Herplex", "Dezinfekcija ruku", "Redovni lijekovi! 🔴"] },
-            { category: "Higijena & Ljepota", color: "purple", items: ["Vlažne maramice", "Maramice za šminku", "Dezić & Parfem (mali)", "Pasta & Četkice", "Britvica", "Sapun za tuširanje", "Štapići za uši / Vata", "Šampon u sapunu", "Maskara, Ruž, Sjajilo", "Maska za kosu", "Nakit", "Krema za lice", "Oblikovanje kovrča"] }
-        ];
+        // Ljekarna (Pametna stanja)
+        function toggleState(el) {
+            let currentState = parseInt(el.getAttribute('data-state'));
+            let newState = (currentState + 1) % 3;
+            el.setAttribute('data-state', newState);
+            localStorage.setItem(el.getAttribute('data-id'), newState); 
+            renderStates();
+        }
 
-        const pharmacyGrid = document.querySelector('.pharmacy-grid');
-        
-        pharmacyData.forEach(cat => {
-            let html = `<div><h3 class="font-semibold text-${cat.color}-700 mb-3 text-sm bg-${cat.color}-50 px-2 py-1.5 rounded border border-${cat.color}-100">${cat.category}</h3><div class="space-y-2">`;
-            
-            cat.items.forEach(item => {
-                let safeId = "med-" + item.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-                let savedState = localStorage.getItem(safeId) || "0";
-                
-                html += `
-                <div class="flex items-center justify-between p-2.5 rounded-lg border cursor-pointer transition-all pharmacy-item" 
-                     data-id="${safeId}" data-state="${savedState}" onclick="togglePharmacyState(this)">
-                    <span class="text-sm font-medium transition-all item-text ${item.includes('🔴') ? 'text-rose-600 font-bold' : 'text-slate-700'}">${item.replace('🔴','')}</span>
-                    <span class="status-badge text-[10px] uppercase font-black px-2 py-1 rounded transition-all"></span>
-                </div>`;
-            });
-            html += `</div></div>`;
-            pharmacyGrid.innerHTML += html;
-        });
-
-        function renderPharmacyVisuals() {
+        function renderStates() {
             document.querySelectorAll('.pharmacy-item').forEach(el => {
-                let state = el.getAttribute('data-state');
+                let id = el.getAttribute('data-id');
+                // Povuci iz memorije ako nema data-state
+                let savedState = localStorage.getItem(id);
+                if (savedState !== null) { el.setAttribute('data-state', savedState); }
+                
+                let state = el.getAttribute('data-state') || "0";
                 let textEl = el.querySelector('.item-text');
                 let badge = el.querySelector('.status-badge');
                 
-                el.className = `flex items-center justify-between p-2.5 rounded-lg border cursor-pointer transition-all pharmacy-item ${state === '0' ? 'border-slate-100 bg-white hover:bg-slate-50' : state === '1' ? 'border-amber-200 bg-amber-50' : 'border-emerald-200 bg-emerald-50'}`;
+                el.className = `flex items-center justify-between p-2 rounded-lg border cursor-pointer transition-all pharmacy-item ${state === '0' ? 'border-slate-100 bg-white hover:bg-slate-50' : state === '1' ? 'border-amber-200 bg-amber-50' : 'border-emerald-200 bg-emerald-50'}`;
 
                 if (state === "0") {
                     badge.innerHTML = "";
@@ -480,37 +466,28 @@
                     textEl.style.textDecoration = "none";
                     textEl.style.opacity = "1";
                 } else if (state === "1") {
-                    badge.innerHTML = "<i class='fa-solid fa-cart-shopping'></i> Kupljeno";
-                    badge.className = "status-badge text-[10px] uppercase font-black px-2 py-1 rounded transition-all bg-amber-200 text-amber-800";
+                    badge.innerHTML = "<i class='fa-solid fa-cart-shopping'></i> Kupili";
+                    badge.className = "status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all bg-amber-200 text-amber-800";
                     textEl.style.textDecoration = "none";
                     textEl.style.opacity = "1";
                 } else if (state === "2") {
                     badge.innerHTML = "<i class='fa-solid fa-suitcase'></i> Kofer";
-                    badge.className = "status-badge text-[10px] uppercase font-black px-2 py-1 rounded transition-all bg-emerald-200 text-emerald-800";
+                    badge.className = "status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all bg-emerald-200 text-emerald-800";
                     textEl.style.textDecoration = "line-through";
                     textEl.style.opacity = "0.5";
                 }
             });
         }
         
-        function togglePharmacyState(el) {
-            let currentState = parseInt(el.getAttribute('data-state'));
-            let newState = (currentState + 1) % 3; // Kruži 0 -> 1 -> 2 -> 0
-            
-            el.setAttribute('data-state', newState);
-            localStorage.setItem(el.getAttribute('data-id'), newState); 
-            
-            renderPharmacyVisuals();
-        }
+        // Renderiraj po učitavanju
+        document.addEventListener("DOMContentLoaded", () => {
+            renderStates();
+        });
 
-        renderPharmacyVisuals();
-
-        // 5. Registracija Service Workera za Offline rad
+        // Registracija SW
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js').catch(err => {
-                    console.log('SW registracija preskočena (ako testiraš lokalno bez web servera).');
-                });
+                navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW Err: ', err));
             });
         }
     </script>
