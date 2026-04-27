@@ -66,6 +66,18 @@
     <main class="max-w-3xl mx-auto mt-4 px-4">
 
         <section id="tab-plan" class="tab-content active">
+            <div class="glass-card p-5 mb-5 border-t-4 border-t-teal-500 bg-teal-50/30">
+                <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center border-b border-teal-100 pb-3 uppercase"><i class="fa-solid fa-list-check text-teal-600 mr-2"></i>Zadnjih 9 dana (Checklist)</h2>
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="preflight-airalo" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Download Airalo eSIM</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                    <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="preflight-pdf" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Print backup documents to PDF</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                    <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="preflight-passport" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Check Passport validity (min 6 months)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                    <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="preflight-batteries" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Charge Drone & GoPro batteries</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                    <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="preflight-apps" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Set up Grab & Gojek accounts</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                    <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="preflight-insurance" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Activate UNIQA travel insurance</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                </div>
+            </div>
+
             <div class="glass-card p-5 mb-5 relative overflow-hidden text-sm">
                 <div class="absolute right-0 top-0 w-32 h-full opacity-10" style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=400&q=80'); background-size: cover; background-position: center; mask-image: linear-gradient(to right, transparent, black); -webkit-mask-image: linear-gradient(to right, transparent, black);"></div>
                 <h2 class="font-bold text-slate-800 mb-4 border-b pb-3 relative z-10 uppercase tracking-tighter"><div class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mr-3 inline-flex"><i class="fa-solid fa-hotel"></i></div>Vaš Smještaj</h2>
@@ -153,7 +165,7 @@
                     <div class="pl-6 relative">
                         <div class="absolute w-4 h-4 bg-cyan-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
                         <span class="text-[9px] font-black text-cyan-600 uppercase bg-cyan-50 px-2 py-1 rounded mb-1 inline-block">Dan 9 | 14.05.</span>
-                        <h3 class="font-bold text-sm text-cyan-800">Gili: Slobodan Dan <span class="text-[9px] text-cyan-600 font-normal uppercase border border-cyan-200 px-1 rounded ml-1">[Oceán/Odmor]</span></h3>
+                        <h3 class="font-bold text-sm text-cyan-800">Gili: Slobodan Dan <span class="text-[9px] text-cyan-600 font-normal uppercase border border-cyan-200 px-1 rounded ml-1">[Ocean/Odmor]</span></h3>
                         <p class="text-[11px] text-slate-600 mt-1">Zrina Preporuka: Iznajmite bicikle (krug oko otoka je 1h) i idite na snorkeling s kornjačama na sjeveru.<br>
                         <span class="text-indigo-600 font-bold block"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Podvodne fotke s kornjačama.</span>
                         <span class="text-rose-500 font-bold block"><i class="fa-solid fa-drone mr-1"></i> DRONE ALERT: Gili je savršen za dron iznad koraljnog grebena!</span></p>
@@ -378,6 +390,14 @@
                 <p class="text-[10px] text-slate-400 mt-2 text-center">Okvirni tečaj: 1 EUR = ~17.200 IDR</p>
             </div>
 
+            <div class="glass-card p-4 mb-5 border-l-4 border-l-indigo-500 bg-indigo-50/30">
+                <h3 class="text-sm font-black text-indigo-800 uppercase tracking-wider mb-2"><i class="fa-solid fa-wallet mr-2"></i>Money Tips</h3>
+                <ul class="text-xs text-slate-700 space-y-1.5">
+                    <li><b>ATM Savjet:</b> Koristite Permata ili BNI bankomate (veći limiti, manji fee).</li>
+                    <li><b>Fallback:</b> Uvijek nositi jednu fizičku karticu uz Apple/Google Pay.</li>
+                </ul>
+            </div>
+
             <div class="glass-card p-5 mb-5">
                 <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center border-b border-slate-100 pb-3">
                     <div class="w-8 h-8 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center mr-3"><i class="fa-solid fa-file-invoice-dollar"></i></div>Fiksni Troškovi
@@ -419,6 +439,11 @@
             <div class="glass-card p-5 mb-5 bg-slate-900 text-white border-none shadow-2xl relative overflow-hidden">
                 <div class="absolute -right-4 -top-4 text-7xl opacity-10"><i class="fa-solid fa-rocket"></i></div>
                 <h2 class="text-lg font-extrabold mb-4 text-teal-400 flex items-center uppercase tracking-widest font-black"><i class="fa-solid fa-clock-rotate-left mr-2"></i>Time Warp Analiza</h2>
+                <div class="mb-4 p-3 bg-white/5 border border-white/10 rounded-xl text-[11px] leading-relaxed">
+                    <p><span class="font-bold text-teal-300">Brojevi letova:</span> ZAG-IST: TK1056 | IST-CGK: TK56 | CGK-DPS: ID6380</p>
+                    <p><span class="font-bold text-teal-300">Prtljaga:</span> 30kg checked, 8kg cabin</p>
+                    <p><span class="font-bold text-teal-300">PNR:</span> [Ovdje upiši šifru]</p>
+                </div>
                 
                 <div class="space-y-4">
                     <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden shadow-sm">
