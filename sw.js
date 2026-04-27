@@ -1,36 +1,61 @@
-// OVO JE NAJVAŽNIJE: Kad god mijenjaš index.html, ovdje samo promijeni V1 u V2, V3 itd.
-const CACHE_NAME = 'bali-2026-v4'; 
+const CACHE_NAME = 'bali-2026-v5';
 const ASSETS = [
   './',
-  './index.html'
+  './index.html',
+  './sw.js',
+  'https://cdn.tailwindcss.com',
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
 ];
 
-// Instalacija novog Workera
+async function cacheAsset(cache, asset) {
+  const request = asset.startsWith('http') ? new Request(asset, { mode: 'no-cors' }) : asset;
+  try {
+    await cache.add(request);
+  } catch (error) {
+    return null;
+  }
+  return true;
+}
+
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(ASSETS);
-    })
+    caches.open(CACHE_NAME).then(cache => Promise.all(ASSETS.map(asset => cacheAsset(cache, asset))))
   );
-  // Odmah gura novu verziju naprijed
   self.skipWaiting();
 });
 
-// Čišćenje starog smeća
 self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys().then(keys => {
-      return Promise.all(
-        keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
-      );
-    })
+    caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))))
   );
   self.clients.claim();
 });
 
-// Vadi iz cachea samo ako nema interneta
 self.addEventListener('fetch', event => {
-  event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request))
-  );
+  if (event.request.method !== 'GET') {
+    return;
+  }
+
+  event.respondWith((async () => {
+    const cache = await caches.open(CACHE_NAME);
+
+    try {
+      const networkResponse = await fetch(event.request);
+      if (networkResponse && (networkResponse.ok || networkResponse.type === 'opaque')) {
+        cache.put(event.request, networkResponse.clone());
+      }
+      return networkResponse;
+    } catch (error) {
+      const cachedResponse = await caches.match(event.request);
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+
+      if (event.request.mode === 'navigate') {
+        return caches.match('./index.html');
+      }
+
+      throw error;
+    }
+  })());
 });

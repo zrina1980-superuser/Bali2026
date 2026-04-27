@@ -69,6 +69,7 @@
         <button onclick="switchTab('tab-ljekarna', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-suitcase-medical mr-2"></i>Ljekarna</button>
         <button onclick="switchTab('tab-financije', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-coins mr-2"></i>Troškovi</button>
         <button onclick="switchTab('tab-info', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-link mr-2"></i>Linkovi</button>
+        <button onclick="switchTab('tab-sos', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-triangle-exclamation mr-2"></i>SOS</button>
     </nav>
 
     <main class="max-w-3xl mx-auto mt-4 px-4">
@@ -175,6 +176,7 @@
                         <span class="text-[9px] font-black text-cyan-600 uppercase bg-cyan-50 px-2 py-1 rounded mb-1 inline-block">Dan 9 | 14.05.</span>
                         <h3 class="font-bold text-sm text-cyan-800">Gili: Slobodan Dan <span class="text-[9px] text-cyan-600 font-normal uppercase border border-cyan-200 px-1 rounded ml-1">[Ocean/Odmor]</span></h3>
                         <p class="text-[11px] text-slate-600 mt-1">Zrina Preporuka: Iznajmite bicikle (krug oko otoka je 1h) i idite na snorkeling s kornjačama na sjeveru.<br>
+                        <span class="text-slate-500 block"><b>Večernji bonus:</b> Ljetno kino na plaži (Sunset Cinema) za film pod zvijezdama uz bean bag i kokice.</span>
                         <span class="text-indigo-600 font-bold block"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Podvodne fotke s kornjačama.</span>
                         <span class="text-rose-500 font-bold block"><i class="fa-solid fa-drone mr-1"></i> DRONE ALERT: Gili je savršen za dron iznad koraljnog grebena!</span></p>
                     </div>
@@ -221,6 +223,7 @@
                         <span class="text-[9px] font-black text-orange-600 uppercase bg-orange-50 px-2 py-1 rounded mb-1 inline-block">Dan 14 | 19.05.</span>
                         <h3 class="font-bold text-sm text-orange-800">Legian: Slobodan Dan <span class="text-[9px] text-orange-600 font-normal uppercase border border-orange-200 px-1 rounded ml-1">[Shopping/Spa]</span></h3>
                         <p class="text-[11px] text-slate-600 mt-1">Zrina Preporuka: Zadnji shopping suvenira po uličicama Kute/Legiana i odlazak na 2-satnu Balinezijsku masažu (cca 15-20€).<br>
+                        <span class="text-slate-500 block"><b>Dodatne opcije:</b> Waterbom Bali za lagani adrenalinski dan ili Beachwalk Shopping Center za klimatizirani shopping i kavu.</span>
                         <span class="text-indigo-600 font-bold block"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Šarenilo street food marketa.</span></p>
                     </div>
 
@@ -265,6 +268,7 @@
                             <li><b>Bebek Betutu:</b> Sporo pečena patka marinirana u balineškim začinima, zamotana u lišće banane. Nezaboravno.</li>
                             <li><b>Ayam Betutu:</b> Ljuta piletina na balineški način — isti začini kao bebek, ali manje cijeni.</li>
                             <li><b>Dadar Gulung:</b> Zelene palačinke (pandan boja) punjene slatkim kokosovim filom. Savršeni desert.</li>
+                            <li><b>Martabak Manis:</b> Debela indonezijska palačinka prepuna čokolade, sira i kikirikija. Kasnonoćni comfort food klasik.</li>
                         </ul>
                     </div>
                     <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
@@ -283,6 +287,7 @@
                 <h2 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-3 uppercase"><i class="fa-solid fa-map-pin text-teal-600 mr-2"></i>Gdje jesti? (Zrina Preporuke)</h2>
                 <div class="space-y-4">
                     <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-melatonin" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Melatonin (za jetlag)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
                         <h3 class="font-bold text-emerald-800 text-sm mb-1"><i class="fa-solid fa-leaf mr-2"></i>Ubud (Džungla)</h3>
                         <p class="text-xs text-slate-600 leading-relaxed">Ubud je prepun organskih, vegan i <i>health</i> restorana, ali i pravih lokalnih mjesta.</p>
                         <ul class="text-[11px] text-slate-600 mt-2 list-disc pl-4">
@@ -352,6 +357,7 @@
                             <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-carape" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Kompresivne čarape - Class 1 (za let)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
                             <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-veno" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Venotonici za noge (gel kesten/loza)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
                             <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-flavo" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Tablete s flavonoidima (priprema vena)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-magnezij" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Magnezij (za mišiće)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
                         </div>
                     </div>
 
@@ -380,13 +386,23 @@
                         <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-recepti" data-state="0" onclick="toggleState(this)"><span class="text-[10px] font-black text-rose-600 item-text">REDOVNI LIJEKOVI (RECEPT)!</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
                     </div>
                 </div>
+                <div class="mt-5 flex justify-end">
+                    <button onclick="localStorage.clear(); location.reload();" class="px-4 py-2 rounded-full border border-slate-300 text-slate-500 hover:text-slate-700 hover:border-slate-400 hover:bg-slate-50 transition-all text-[11px] font-bold uppercase tracking-widest bg-white/70 backdrop-blur-sm">
+                        <i class="fa-solid fa-rotate-left mr-2"></i>Resetiraj checklistu
+                    </button>
+                </div>
             </div>
         </section>
 
 <section id="tab-financije" class="tab-content">
             
             <div class="glass-card p-5 mb-5 border-t-4 border-t-indigo-500 bg-indigo-50/30">
-                <h2 class="text-lg font-bold text-slate-800 mb-3 flex items-center"><i class="fa-solid fa-calculator text-indigo-500 mr-2"></i>Kalkulator (IDR ⇄ EUR)</h2>
+                <div class="flex items-start justify-between gap-3 mb-3">
+                    <h2 class="text-lg font-bold text-slate-800 flex items-center"><i class="fa-solid fa-calculator text-indigo-500 mr-2"></i>Kalkulator (IDR ⇄ EUR)</h2>
+                    <button id="refresh-rate-btn" onclick="refreshExchangeRate()" class="shrink-0 px-3 py-2 rounded-full bg-indigo-600 text-white text-[10px] font-black uppercase tracking-widest shadow-sm hover:bg-indigo-700 transition-colors">
+                        <i class="fa-solid fa-arrows-rotate mr-1.5"></i>Ažuriraj tečaj
+                    </button>
+                </div>
                 <div class="flex items-center space-x-3 bg-white p-2 rounded-xl border border-indigo-100 shadow-sm">
                     <div class="flex-1 relative">
                         <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 font-bold text-sm">Rp</span>
@@ -398,7 +414,10 @@
                         <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 font-bold text-sm">€</span>
                     </div>
                 </div>
-                <p class="text-[10px] text-slate-400 mt-2 text-center">Okvirni tečaj: 1 EUR = ~17.200 IDR</p>
+                <div class="mt-3 flex items-center justify-between gap-3 text-[10px]">
+                    <p id="rate-label" class="text-slate-500 font-medium">Okvirni tečaj: 1 EUR = ~17.200 IDR</p>
+                    <span id="rate-status" class="px-2.5 py-1 rounded-full bg-white/80 border border-indigo-100 text-slate-400 font-bold uppercase tracking-widest">Fallback</span>
+                </div>
             </div>
 
             <div class="glass-card p-4 mb-5 border-l-4 border-l-indigo-500 bg-indigo-50/30">
@@ -561,6 +580,10 @@
                     <a href="https://indonesia-arrival.com/register/apply?gad_source=1&gad_campaignid=23161203811" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-amber-500 text-white py-4 rounded-2xl font-black shadow-lg hover:bg-amber-600 transition-colors uppercase text-sm tracking-widest"><i class="fa-solid fa-passport mr-3 text-xl"></i>Plati e-Vizu (e-VoA)</a>
                     <a href="https://lovebali.baliprov.go.id/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-emerald-600 text-white py-4 rounded-2xl font-black shadow-lg hover:bg-emerald-700 transition-colors uppercase text-sm tracking-widest"><i class="fa-solid fa-leaf mr-3 text-xl"></i>LoveBali Taksa</a>
                 </div>
+                <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <a href="grab://open" class="flex items-center justify-center w-full bg-green-600 text-white py-3 rounded-2xl font-black shadow-lg hover:bg-green-700 transition-colors uppercase text-xs tracking-widest"><i class="fa-solid fa-car-side mr-2"></i>Otvori Grab</a>
+                    <a href="gojek://home" class="flex items-center justify-center w-full bg-emerald-500 text-white py-3 rounded-2xl font-black shadow-lg hover:bg-emerald-600 transition-colors uppercase text-xs tracking-widest"><i class="fa-solid fa-motorcycle mr-2"></i>Otvori Gojek</a>
+                </div>
                 <div class="mt-8 border-t pt-6">
                     <h3 class="text-xs font-black text-slate-800 uppercase tracking-widest mb-4">Pravila Preživljavanja</h3>
                     <ul class="text-[11px] text-slate-600 space-y-4 font-medium leading-relaxed">
@@ -569,6 +592,34 @@
                         <li class="flex items-start"><i class="fa-solid fa-hand text-orange-400 mr-3 mt-1 text-base"></i> <div><b>DESNA RUKA:</b> Lijeva ruka je nečista. Plaćaj i pružaj stvari desnom rukom.</div></li>
                         <li class="flex items-start"><i class="fa-solid fa-wifi text-indigo-500 mr-3 mt-1 text-base"></i> <div><b>INTERNET:</b> Airalo e-SIM kupite prije polaska, a Grab/Gojek aplikacije za taxi.</div></li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+<section id="tab-sos" class="tab-content">
+            <div class="glass-card p-5 mb-5 border-t-4 border-t-rose-500 bg-rose-50/30">
+                <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center border-b border-rose-100 pb-3 uppercase"><i class="fa-solid fa-hotel text-rose-500 mr-2"></i>Hoteli & Adrese</h2>
+                <div class="space-y-3 text-xs text-slate-600">
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm"><p class="font-bold text-slate-800">Ibis Styles Jakarta Airport</p><p>Jl. Husein Sastranegara Kav. 1, Benda, Tangerang 15125</p></div>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm"><p class="font-bold text-slate-800">Sthala, a Tribute Portfolio Hotel, Ubud Bali</p><p>Jl. A.A. Gde Rai, Mawang Kelod, Lodtunduh, Ubud, Gianyar, Bali 80571</p></div>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm"><p class="font-bold text-slate-800">Marc Hotel Gili Trawangan</p><p>Kavling Jl. Pantai Gili Trawangan No. 4, Gili Indah, Pemenang, Lombok Utara 83352</p></div>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm"><p class="font-bold text-slate-800">Fairfield by Marriott Bali Legian</p><p>Jl. Sri Rama 8C, Legian, Kuta, Badung, Bali 80361</p></div>
+                </div>
+            </div>
+
+            <div class="glass-card p-5 mb-5 border-t-4 border-t-amber-500 bg-amber-50/40">
+                <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center border-b border-amber-100 pb-3 uppercase"><i class="fa-solid fa-building-columns text-amber-500 mr-2"></i>Konzulat</h2>
+                <div class="bg-white p-4 rounded-xl border border-amber-100 shadow-sm text-sm text-slate-700 leading-relaxed">
+                    <p class="font-bold text-slate-800">Počasni konzulat RH</p>
+                    <p><a href="tel:+62361270521" class="text-amber-700 underline font-bold">+62 361 270 521</a></p>
+                    <p>Jl. Raya Puputan no. 1, Denpasar</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-5 border-t-4 border-t-indigo-500 bg-indigo-50/30">
+                <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center border-b border-indigo-100 pb-3 uppercase"><i class="fa-solid fa-passport text-indigo-500 mr-2"></i>Kopije Putovnica</h2>
+                <div class="bg-white p-4 rounded-xl border border-indigo-100 shadow-sm text-sm text-slate-700 leading-relaxed">
+                    <p><b>Obavezno:</b> imajte PDF kopiju putovnica na mobitelu, jednu offline kopiju u emailu i jednu isprintanu kopiju odvojeno od originala.</p>
                 </div>
             </div>
         </section>
@@ -634,8 +685,84 @@
             updateDualClock();
             setInterval(updateDualClock, 1000);
 
-            // Kalkulator Valuta
-        const tecaj = 17200;
+        // Kalkulator Valuta
+        const fallbackTecaj = 17200;
+        let tecaj = fallbackTecaj;
+
+        function setRateUI(label, status, statusClasses) {
+            const rateLabel = document.getElementById('rate-label');
+            const rateStatus = document.getElementById('rate-status');
+            if (rateLabel) {
+                rateLabel.textContent = label;
+            }
+            if (rateStatus) {
+                rateStatus.className = `px-2.5 py-1 rounded-full border text-[10px] font-bold uppercase tracking-widest ${statusClasses}`;
+                rateStatus.textContent = status;
+            }
+        }
+
+        function applyStoredRate() {
+            const savedRate = parseFloat(localStorage.getItem('bali-eur-idr-rate'));
+            const savedAt = localStorage.getItem('bali-eur-idr-rate-updated');
+
+            if (!Number.isNaN(savedRate) && savedRate > 0) {
+                tecaj = savedRate;
+                setRateUI(`Live tečaj: 1 EUR = ${Math.round(tecaj).toLocaleString('hr-HR')} IDR${savedAt ? ` · ${savedAt}` : ''}`, 'Spremljeno', 'bg-emerald-50 text-emerald-700 border-emerald-200');
+                return true;
+            }
+
+            tecaj = fallbackTecaj;
+            setRateUI(`Okvirni tečaj: 1 EUR = ~${fallbackTecaj.toLocaleString('hr-HR')} IDR`, 'Fallback', 'bg-slate-50 text-slate-500 border-slate-200');
+            return false;
+        }
+
+        async function refreshExchangeRate() {
+            const refreshBtn = document.getElementById('refresh-rate-btn');
+            if (refreshBtn) {
+                refreshBtn.disabled = true;
+                refreshBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1.5"></i>Učitavam';
+            }
+
+            try {
+                const response = await fetch('https://open.er-api.com/v6/latest/EUR');
+                if (!response.ok) {
+                    throw new Error('Rate fetch failed');
+                }
+
+                const data = await response.json();
+                const liveRate = data && data.rates ? data.rates.IDR : null;
+                if (!liveRate) {
+                    throw new Error('Missing IDR rate');
+                }
+
+                tecaj = liveRate;
+                const updatedAt = new Intl.DateTimeFormat('hr', {
+                    day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
+                }).format(new Date());
+                localStorage.setItem('bali-eur-idr-rate', String(liveRate));
+                localStorage.setItem('bali-eur-idr-rate-updated', updatedAt);
+                setRateUI(`Live tečaj: 1 EUR = ${Math.round(tecaj).toLocaleString('hr-HR')} IDR · ${updatedAt}`, 'Live', 'bg-indigo-50 text-indigo-700 border-indigo-200');
+
+                if (document.getElementById('idr-input').value) {
+                    calcIDRtoEUR();
+                } else if (document.getElementById('eur-input').value) {
+                    calcEURtoIDR();
+                }
+            } catch (error) {
+                const hasStored = applyStoredRate();
+                if (!hasStored) {
+                    setRateUI(`Okvirni tečaj: 1 EUR = ~${fallbackTecaj.toLocaleString('hr-HR')} IDR`, 'Offline', 'bg-amber-50 text-amber-700 border-amber-200');
+                } else {
+                    setRateUI(document.getElementById('rate-label').textContent, 'Offline cache', 'bg-amber-50 text-amber-700 border-amber-200');
+                }
+            } finally {
+                if (refreshBtn) {
+                    refreshBtn.disabled = false;
+                    refreshBtn.innerHTML = '<i class="fa-solid fa-arrows-rotate mr-1.5"></i>Ažuriraj tečaj';
+                }
+            }
+        }
+
         function calcIDRtoEUR() {
             let idrInput = document.getElementById('idr-input');
             let eurInput = document.getElementById('eur-input');
@@ -701,6 +828,7 @@
                     switchTab('tab-plan', defaultBtn);
                 }
             }
+            applyStoredRate();
             renderStates();
         });
 
