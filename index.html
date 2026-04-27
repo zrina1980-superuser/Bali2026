@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="hr">
 <head>
     <meta charset="UTF-8">
@@ -56,15 +56,243 @@
     </header>
 
     <nav class="max-w-3xl mx-auto mt-6 px-4 flex overflow-x-auto space-x-3 pb-2 hide-scrollbar">
-        <button onclick="switchTab('tab-financije', this)" class="nav-btn px-5 py-2.5 bg-teal-600 text-white rounded-xl shadow-md font-bold whitespace-nowrap transition-all"><i class="fa-solid fa-coins mr-2"></i>Troškovi</button>
-        <button onclick="switchTab('tab-plan', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-map-location-dot mr-2"></i>Plan & Hoteli</button>
+        <button onclick="switchTab('tab-plan', this)" class="nav-btn px-5 py-2.5 bg-teal-600 text-white rounded-xl shadow-md font-bold whitespace-nowrap transition-all"><i class="fa-solid fa-map-location-dot mr-2"></i>Dnevni Plan</button>
+        <button onclick="switchTab('tab-gastro', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-utensils mr-2"></i>Gastro</button>
         <button onclick="switchTab('tab-ljekarna', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-suitcase-medical mr-2"></i>Ljekarna</button>
-        <button onclick="switchTab('tab-info', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-link mr-2"></i>Važni Linkovi</button>
+        <button onclick="switchTab('tab-financije', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-coins mr-2"></i>Troškovi</button>
+        <button onclick="switchTab('tab-info', this)" class="nav-btn px-5 py-2.5 bg-white text-slate-500 rounded-xl shadow-sm font-bold whitespace-nowrap transition-all border border-slate-200"><i class="fa-solid fa-link mr-2"></i>Linkovi</button>
     </nav>
 
     <main class="max-w-3xl mx-auto mt-4 px-4">
 
-        <section id="tab-financije" class="tab-content active">
+        <section id="tab-plan" class="tab-content active">
+            <div class="glass-card p-5 mb-5 relative overflow-hidden text-sm">
+                <div class="absolute right-0 top-0 w-32 h-full opacity-10" style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=400&q=80'); background-size: cover; background-position: center; mask-image: linear-gradient(to right, transparent, black); -webkit-mask-image: linear-gradient(to right, transparent, black);"></div>
+                <h2 class="font-bold text-slate-800 mb-4 border-b pb-3 relative z-10 uppercase tracking-tighter"><div class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mr-3 inline-flex"><i class="fa-solid fa-hotel"></i></div>Vaš Smještaj</h2>
+                <div class="space-y-3 relative z-10">
+                    <a href="https://all.accor.com/hotel/8593/index.en.shtml" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white/90 backdrop-blur border border-slate-200 rounded-xl shadow-sm"><span class="flex items-center"><i class="fa-solid fa-bed mr-2 text-slate-400"></i>Ibis Styles Jakarta</span><i class="fa-solid fa-arrow-up-right-from-square text-indigo-500"></i></a>
+                    <a href="https://www.marriott.com/en-us/hotels/dpstp-sthala-a-tribute-portfolio-hotel-ubud-bali/overview/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white/90 backdrop-blur border border-emerald-200 rounded-xl shadow-sm font-bold text-emerald-700"><span><i class="fa-solid fa-leaf mr-2 text-emerald-500"></i>Sthala, Ubud Marriott</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://marcgilitrawangan.com/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white/90 backdrop-blur border border-cyan-200 rounded-xl shadow-sm font-bold text-cyan-700"><span class="flex items-center"><i class="fa-solid fa-water mr-2 text-cyan-400"></i>Marc Hotel Gili</span><i class="fa-solid fa-arrow-up-right-from-square text-indigo-500"></i></a>
+                    <a href="https://www.marriott.com/en-us/hotels/dpsfi-fairfield-bali-legian/overview/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white/90 backdrop-blur border border-orange-200 rounded-xl shadow-sm font-bold text-orange-600"><span><i class="fa-solid fa-umbrella-beach mr-2"></i>Fairfield, Legian Marriott</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="glass-card p-5">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center border-b pb-3 uppercase"><i class="fa-solid fa-route text-rose-500 mr-2"></i>Dnevni Plan Aktivnosti</h2>
+                <div class="relative border-l-2 border-teal-200 ml-4 space-y-8 pb-4">
+                    
+                    <div class="pl-6 relative">
+                        <div class="absolute w-4 h-4 bg-slate-400 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
+                        <span class="text-[9px] font-black text-slate-500 uppercase bg-slate-100 px-2 py-1 rounded mb-1 inline-block">Dan 01-03 | Tranzit</span>
+                        <h3 class="font-bold text-sm text-slate-800">Polazak & Jakarta</h3>
+                        <p class="text-[11px] text-slate-500 mt-1">Let preko Istanbula, odmor u Jakarti i dolazak u džunglu Ubuda (Sthala Hotel).</p>
+                    </div>
+
+                    <div class="pl-6 relative">
+                        <div class="absolute w-4 h-4 bg-emerald-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
+                        <span class="text-[9px] font-black text-emerald-600 uppercase bg-emerald-50 px-2 py-1 rounded mb-1 inline-block">Dan 04-07 | Ubud: Džungla & Akcija</span>
+                        <ul class="text-[11px] text-slate-600 mt-2 space-y-3 font-medium">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-water text-teal-500 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Slapovi & Cretya:</b> Kanto Lampo, Goa Gajah hram i Cretya klub.<br>
+                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Slapovi i ljuljačke iznad riže.</span></div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-vihara text-emerald-500 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Besakih & Vulkan:</b> Majke hram Besakih, Tirtagangga palača i Virgin Beach.<br>
+                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Tirtagangga fontane i Besakih stepenice.</span></div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-monkey text-amber-600 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Rafting & Majmuni:</b> Rafting rijekom Ayung i Šuma majmuna.<br>
+                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Selfie s majmunima (čuvaj mobitel!).</span></div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-mug-hot text-orange-400 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Rest & Chill:</b> Slobodan dan za masaže i bazen u hotelu Sthala.</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pl-6 relative">
+                        <div class="absolute w-4 h-4 bg-cyan-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
+                        <span class="text-[9px] font-black text-cyan-600 uppercase bg-cyan-50 px-2 py-1 rounded mb-1 inline-block">Dan 08-09 | Gili: Kornjače & Reset</span>
+                        <p class="text-[11px] text-slate-600 mt-1 leading-relaxed italic">
+                            <i class="fa-solid fa-ship text-cyan-500 mr-1"></i> Gliserom do Gilija. Nema motora, samo bicikli i kornjače.<br>
+                            <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Zalasci na ljuljačkama u moru.</span>
+                        </p>
+                    </div>
+
+                    <div class="pl-6 relative">
+                        <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
+                        <span class="text-[9px] font-black text-orange-600 uppercase bg-orange-50 px-2 py-1 rounded mb-1 inline-block">Dan 10-15 | Legian: Plaža & Ritualia</span>
+                        <ul class="text-[11px] text-slate-600 mt-2 space-y-3 font-medium">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-martini-glass-citrus text-orange-400 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Tanah Lot & Finns:</b> Legendarni hram u moru i Finns Beach Club.<br>
+                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-cake-candles mr-1 text-pink-500"></i> IFKIN ROĐENDAN: Rezerviraj Finns VIP krevet prije 13h za manji minimum spend!</span></div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-fire text-red-500 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Uluwatu:</b> Litice, Melasti plaža i Kecak ples vatre.<br>
+                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Litice Uluwatua u zalazak.</span></div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-utensils text-rose-400 mr-3 w-4 text-center mt-1"></i> 
+                                <div><b>Nusa Dua & Jimbaran:</b> Čamci i večera na pijesku uz more.<br>
+                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Večera uz svijeće na Jimbaranu.</span></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pl-6 relative">
+                        <div class="absolute w-4 h-4 bg-slate-800 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
+                        <span class="text-[9px] font-black text-slate-600 uppercase bg-slate-100 px-2 py-1 rounded mb-1 inline-block">Dan 16 | Povratak Doma</span>
+                        <h3 class="font-bold text-sm text-slate-800">Dolazak u Bistru 🏠</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="tab-gastro" class="tab-content">
+            <div class="bg-orange-50 border-l-4 border-orange-500 p-4 mb-5 rounded-r-xl shadow-sm">
+                <h3 class="font-black text-orange-800 text-[11px] uppercase tracking-widest mb-1"><i class="fa-solid fa-bell-concierge mr-2"></i>Zlatna Gastro Pravila</h3>
+                <ul class="text-[11px] text-orange-900 mt-2 space-y-1 font-medium">
+                    <li><i class="fa-solid fa-circle-check text-green-500 mr-1"></i> U Warunzima (lokalne obiteljske zalogajnice) je hrana najjeftinija i često najukusnija.</li>
+                    <li><i class="fa-solid fa-circle-xmark text-red-500 mr-1"></i> Pazite na oznake ljutine. "Malo ljuto" na Baliju je Hrvatima često "vatra u ustima".</li>
+                    <li><i class="fa-solid fa-circle-check text-green-500 mr-1"></i> Led u barovima se radi od pročišćene vode i siguran je. Izbjegavajte onaj mrvljeni s ulice.</li>
+                </ul>
+            </div>
+
+            <div class="glass-card p-5 mb-5">
+                <h2 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-3 uppercase"><i class="fa-solid fa-bowl-food text-orange-500 mr-2"></i>Što morate probati</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                        <h3 class="font-bold text-slate-800 mb-2 text-sm text-orange-600">Top Jela</h3>
+                        <ul class="text-xs text-slate-600 space-y-2">
+                            <li><b>Nasi Goreng / Mie Goreng:</b> Pržena riža ili rezanci s jajima, piletinom i povrćem. Klasik.</li>
+                            <li><b>Babi Guling:</b> Odojak pečen na ražnju s balineškim začinima. Pravi specijalitet (pošto su oni pretežno Hindu, svinjetina je dozvoljena).</li>
+                            <li><b>Nasi Campur:</b> Malo riže u sredini i hrpa malih, različitih priloga (meso, tofu, kikiriki, povrće) okolo.</li>
+                            <li><b>Sate Lilit:</b> Ražnjići od mljevenog mesa (često riba ili piletina) omotani oko štapića limunske trave.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                        <h3 class="font-bold text-slate-800 mb-2 text-sm text-cyan-600">Top Pića</h3>
+                        <ul class="text-xs text-slate-600 space-y-2">
+                            <li><b>Bintang Pivo:</b> Lokalno pivo, pitko i savršeno za zalaske sunca. Radler verzija (s limunom) je odlična.</li>
+                            <li><b>Arak:</b> Lokalna žestica (od palme ili riže). <i>Oprez: Pijte arak samo u provjerenim, dobrim barovima, nikada onaj s ulice iz plastičnih boca!</i></li>
+                            <li><b>Kopi Luwak:</b> Kava koja se dobiva iz izmeta cibetke (životinjice). Najskuplja kava na svijetu, probat ćete ju na izletu kod Tanah Lota.</li>
+                            <li><b>Svježi kokos:</b> Mačetom odrezan vrh na plaži. Najbolja hidratacija.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-5">
+                <h2 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-3 uppercase"><i class="fa-solid fa-map-pin text-teal-600 mr-2"></i>Gdje jesti? (Zrina Preporuke)</h2>
+                <div class="space-y-4">
+                    <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                        <h3 class="font-bold text-emerald-800 text-sm mb-1"><i class="fa-solid fa-leaf mr-2"></i>Ubud (Džungla)</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Ubud je prepun organskih, vegan i <i>health</i> restorana, ali i pravih lokalnih mjesta.</p>
+                        <ul class="text-[11px] text-slate-600 mt-2 list-disc pl-4">
+                            <li><b>Warung Babi Guling Ibu Oka:</b> Tu Anthony Bourdain jeo odojka. Autentično, ljuto i puno lokalaca.</li>
+                            <li><b>Bridges Bali Restaurant:</b> U sklopu vašeg Sthala hotela. Skuplje, ali predivan romantičan pogled na rijeku Ayung.</li>
+                            <li><b>Clear Cafe:</b> Odličan fuzijski restoran s pogledom na džunglu (probajte njihov smoothie).</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-cyan-50/50 p-4 rounded-xl border border-cyan-100">
+                        <h3 class="font-bold text-cyan-800 text-sm mb-1"><i class="fa-solid fa-water mr-2"></i>Gili Trawangan</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Na Giliju je sve oko morske hrane i roštilja na plaži.</p>
+                        <ul class="text-[11px] text-slate-600 mt-2 list-disc pl-4">
+                            <li><b>Gili T Night Market:</b> Apsolutni <i>must-do</i>. Svake večeri trg se pretvara u ogroman roštilj na otvorenom. Sami birate svježu ribu, škampe ili ražnjiće.</li>
+                            <li><b>Regina Pizzeria:</b> Ako vam dojadi riža, ovo Talijan drži najbolju pizzu iz krušne peći na otocima.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-orange-50/50 p-4 rounded-xl border border-orange-100">
+                        <h3 class="font-bold text-orange-800 text-sm mb-1"><i class="fa-solid fa-umbrella-beach mr-2"></i>Legian i Jug (Plaže)</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Ovdje imate sve, od fensi <i>beach clubova</i> do ulične hrane.</p>
+                        <ul class="text-[11px] text-slate-600 mt-2 list-disc pl-4">
+                            <li><b>Jimbaran Fish Market (Večera na plaži):</b> Ovo imate i u planu (Dan 14). Deseci restorana sa svježom ribom postave stolove direktno na pijesak. Jede se rukama uz zalazak sunca. Magija.</li>
+                            <li><b>Fat Chow (Kuta/Legian):</b> Azijska <i>fusion</i> hrana s ogromnim porcijama. Sjajno za moderniju klopu.</li>
+                            <li><b>Azul Beach Club ili Finns:</b> Skuplja opcija, ali vrhunski burgeri, pizze i kokteli uz bazene tik do oceana.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="tab-ljekarna" class="tab-content">
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-5 rounded-r-xl shadow-lg relative overflow-hidden">
+                <div class="absolute right-0 top-0 text-3xl opacity-10 p-2"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <h3 class="font-black text-rose-800 text-[11px] uppercase tracking-widest mb-1">Denga & Bali Belly Guard</h3>
+                <p class="text-xs text-rose-700 leading-relaxed font-bold italic underline">ZABRANJENI: Aspirin, Ibuprofen, Ketonal. DOZVOLJEN ISKLJUČIVO: PARACETAMOL!</p>
+            </div>
+            
+            <div class="glass-card p-5">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center border-b pb-3 uppercase"><i class="fa-solid fa-suitcase-medical text-teal-600 mr-2"></i>Ifkina Putna Poliklinika (Original)</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <div class="bg-teal-50/30 p-4 rounded-2xl border border-teal-100 shadow-sm">
+                        <h3 class="font-black text-teal-800 mb-3 text-[10px] uppercase tracking-wider border-b border-teal-100 pb-1">Želudac & Probava</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-ugljen" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Aktivni ugljen (kod sumnje na trovanje)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-probiotik" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-bold underline item-text">Probiotici (S. boulardii) - piti 7d prije!</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-seldiar" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Seldiar / Imodium (zaustavljanje proljeva)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-rehidromiks" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium italic item-text">Rehidromiks & <b>Pocari Sweat</b> (kupi tamo!)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-dramina" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Dramina / Đumbir bomboni (za brod)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-rose-50/30 p-4 rounded-2xl border border-rose-100 shadow-sm">
+                        <h3 class="font-black text-rose-800 mb-3 text-[10px] uppercase tracking-wider border-b border-rose-100 pb-1">Bolovi, Rane & Alergije</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-bolove" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Tablete za bolove & <b>Paracetamol</b> (Lupocet)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-sprej" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Antiseptik sprej & Tyrosur mast</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-flasteri" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Flasteri, gaze & Claritine (alergija)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-kapi" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Kapi za oči & Krema protiv svrbeža</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50/30 p-4 rounded-2xl border border-blue-100 shadow-sm">
+                        <h3 class="font-black text-blue-800 mb-3 text-[10px] uppercase tracking-wider border-b border-blue-100 pb-1">Vene & Dugi letovi</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-carape" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Kompresivne čarape - Class 1 (za let)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-veno" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Venotonici za noge (gel kesten/loza)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-flavo" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Tablete s flavonoidima (priprema vena)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50/30 p-4 rounded-2xl border border-amber-100 shadow-sm">
+                        <h3 class="font-black text-amber-800 mb-3 text-[10px] uppercase tracking-wider border-b border-amber-100 pb-1">Zaštita & Specijalno</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-komarci" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Tropski sprej protiv komaraca (DEET 30+)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-spf" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">SPF 50+ & Gel nakon sunčanja (Kupi u HR!)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-canesten" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Canesten & Linex Lady (Lady Guard)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-operil" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium italic underline item-text">Operil / Herplex / Dezinfekcija ruku</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-purple-50/30 p-4 rounded-2xl border border-purple-100 shadow-sm">
+                    <h3 class="font-black text-purple-800 mb-3 text-[10px] uppercase tracking-widest border-b border-purple-100 pb-1"><i class="fa-solid fa-pump-soap mr-2"></i>Higijena, Ljepota & Nakit</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-maramice" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Vlažne anti. maramice & Šminka out</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-dezic" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Dezić & Parfem (mini)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-pasta" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Pasta & Četkice & Britvica</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-sapun" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Sapun za tuš & Štapići uši</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-sampon" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Šampon u sapunu & Maska kosu</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-sminka" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Maskara, Ruž, Sjajilo</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-nakit" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Nakit (Osnovno) & Četka</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-kovrce" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Oblikovanje kovrča</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-recepti" data-state="0" onclick="toggleState(this)"><span class="text-[10px] font-black text-rose-600 item-text">REDOVNI LIJEKOVI (RECEPT)!</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="tab-financije" class="tab-content">
             
             <div class="glass-card p-5 mb-5 border-t-4 border-t-indigo-500 bg-indigo-50/30">
                 <h2 class="text-lg font-bold text-slate-800 mb-3 flex items-center"><i class="fa-solid fa-calculator text-indigo-500 mr-2"></i>Kalkulator (IDR ⇄ EUR)</h2>
@@ -119,18 +347,7 @@
             </div>
         </section>
 
-        <section id="tab-plan" class="tab-content">
-            <div class="glass-card p-5 mb-5 relative overflow-hidden text-sm">
-                <div class="absolute right-0 top-0 w-32 h-full opacity-10" style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=400&q=80'); background-size: cover; background-position: center; mask-image: linear-gradient(to right, transparent, black); -webkit-mask-image: linear-gradient(to right, transparent, black);"></div>
-                <h2 class="font-bold text-slate-800 mb-4 border-b pb-3 relative z-10 uppercase tracking-tighter"><div class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center mr-3 inline-flex"><i class="fa-solid fa-hotel"></i></div>Vaš Smještaj</h2>
-                <div class="space-y-3 relative z-10">
-                    <a href="https://all.accor.com/hotel/8593/index.en.shtml" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white/90 backdrop-blur border border-slate-200 rounded-xl shadow-sm"><span class="flex items-center"><i class="fa-solid fa-bed mr-2 text-slate-400"></i>Ibis Styles Jakarta</span><i class="fa-solid fa-arrow-up-right-from-square text-indigo-500"></i></a>
-                    <a href="https://www.marriott.com/en-us/hotels/dpstp-sthala-a-tribute-portfolio-hotel-ubud-bali/overview/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white/90 backdrop-blur border border-emerald-200 rounded-xl shadow-sm font-bold text-emerald-700"><span><i class="fa-solid fa-leaf mr-2 text-emerald-500"></i>Sthala, Ubud Marriott</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    <a href="https://marcgilitrawangan.com/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white/90 backdrop-blur border border-cyan-200 rounded-xl shadow-sm font-bold text-cyan-700"><span class="flex items-center"><i class="fa-solid fa-water mr-2 text-cyan-400"></i>Marc Hotel Gili</span><i class="fa-solid fa-arrow-up-right-from-square text-indigo-500"></i></a>
-                    <a href="https://www.marriott.com/en-us/hotels/dpsfi-fairfield-bali-legian/overview/" target="_blank" rel="noopener noreferrer" class="flex justify-between p-3 bg-white/90 backdrop-blur border border-orange-200 rounded-xl shadow-sm font-bold text-orange-600"><span><i class="fa-solid fa-umbrella-beach mr-2"></i>Fairfield, Legian Marriott</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-
+<section id="tab-info" class="tab-content">
             <div class="glass-card p-5 mb-5 bg-slate-900 text-white border-none shadow-2xl relative overflow-hidden">
                 <div class="absolute -right-4 -top-4 text-7xl opacity-10"><i class="fa-solid fa-rocket"></i></div>
                 <h2 class="text-lg font-extrabold mb-4 text-teal-400 flex items-center uppercase tracking-widest font-black"><i class="fa-solid fa-clock-rotate-left mr-2"></i>Time Warp Analiza</h2>
@@ -218,153 +435,6 @@
                 </div>
             </div>
 
-            <div class="glass-card p-5">
-                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center border-b pb-3 uppercase"><i class="fa-solid fa-route text-rose-500 mr-2"></i>Dnevni Plan Aktivnosti</h2>
-                <div class="relative border-l-2 border-teal-200 ml-4 space-y-8 pb-4">
-                    
-                    <div class="pl-6 relative">
-                        <div class="absolute w-4 h-4 bg-slate-400 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
-                        <span class="text-[9px] font-black text-slate-500 uppercase bg-slate-100 px-2 py-1 rounded mb-1 inline-block">Dan 01-03 | Tranzit</span>
-                        <h3 class="font-bold text-sm text-slate-800">Polazak & Jakarta</h3>
-                        <p class="text-[11px] text-slate-500 mt-1">Let preko Istanbula, odmor u Jakarti i dolazak u džunglu Ubuda (Sthala Hotel).</p>
-                    </div>
-
-                    <div class="pl-6 relative">
-                        <div class="absolute w-4 h-4 bg-emerald-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
-                        <span class="text-[9px] font-black text-emerald-600 uppercase bg-emerald-50 px-2 py-1 rounded mb-1 inline-block">Dan 04-07 | Ubud: Džungla & Akcija</span>
-                        <ul class="text-[11px] text-slate-600 mt-2 space-y-3 font-medium">
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-water text-teal-500 mr-3 w-4 text-center mt-1"></i> 
-                                <div><b>Slapovi & Cretya:</b> Kanto Lampo, Goa Gajah hram i Cretya klub.<br>
-                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Slapovi i ljuljačke iznad riže.</span></div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-vihara text-emerald-500 mr-3 w-4 text-center mt-1"></i> 
-                                <div><b>Besakih & Vulkan:</b> Majke hram Besakih, Tirtagangga palača i Virgin Beach.<br>
-                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Tirtagangga fontane i Besakih stepenice.</span></div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-monkey text-amber-600 mr-3 w-4 text-center mt-1"></i> 
-                                <div><b>Rafting & Majmuni:</b> Rafting rijekom Ayung i Šuma majmuna.<br>
-                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Selfie s majmunima (čuvaj mobitel!).</span></div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-mug-hot text-orange-400 mr-3 w-4 text-center mt-1"></i> 
-                                <div><b>Rest & Chill:</b> Slobodan dan za masaže i bazen u hotelu Sthala.</div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="pl-6 relative">
-                        <div class="absolute w-4 h-4 bg-cyan-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
-                        <span class="text-[9px] font-black text-cyan-600 uppercase bg-cyan-50 px-2 py-1 rounded mb-1 inline-block">Dan 08-09 | Gili: Kornjače & Reset</span>
-                        <p class="text-[11px] text-slate-600 mt-1 leading-relaxed italic">
-                            <i class="fa-solid fa-ship text-cyan-500 mr-1"></i> Gliserom do Gilija. Nema motora, samo bicikli i kornjače.<br>
-                            <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Zalasci na ljuljačkama u moru.</span>
-                        </p>
-                    </div>
-
-                    <div class="pl-6 relative">
-                        <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
-                        <span class="text-[9px] font-black text-orange-600 uppercase bg-orange-50 px-2 py-1 rounded mb-1 inline-block">Dan 10-15 | Legian: Plaža & Ritualia</span>
-                        <ul class="text-[11px] text-slate-600 mt-2 space-y-3 font-medium">
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-martini-glass-citrus text-orange-400 mr-3 w-4 text-center mt-1"></i> 
-                                <div><b>Tanah Lot:</b> Legendarni hram u moru i Finns Beach Club.<br>
-                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Hram na hridi u sumrak.</span></div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-fire text-red-500 mr-3 w-4 text-center mt-1"></i> 
-                                <div><b>Uluwatu:</b> Litice, Melasti plaža i Kecak ples vatre.<br>
-                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Litice Uluwatua (Top fotka!).</span></div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fa-solid fa-utensils text-rose-400 mr-3 w-4 text-center mt-1"></i> 
-                                <div><b>Nusa Dua & Jimbaran:</b> Čamci i večera na pijesku uz more.<br>
-                                <span class="text-indigo-600 text-[10px] font-bold"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Večera uz svijeće na Jimbaranu.</span></div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="pl-6 relative">
-                        <div class="absolute w-4 h-4 bg-slate-800 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
-                        <span class="text-[9px] font-black text-slate-600 uppercase bg-slate-100 px-2 py-1 rounded mb-1 inline-block">Dan 16 | Povratak Doma</span>
-                        <h3 class="font-bold text-sm text-slate-800">Dolazak u Bistru 🏠</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="tab-ljekarna" class="tab-content">
-            <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-5 rounded-r-xl shadow-lg relative overflow-hidden">
-                <div class="absolute right-0 top-0 text-3xl opacity-10 p-2"><i class="fa-solid fa-triangle-exclamation"></i></div>
-                <h3 class="font-black text-rose-800 text-[11px] uppercase tracking-widest mb-1">Denga & Bali Belly Guard</h3>
-                <p class="text-xs text-rose-700 leading-relaxed font-bold italic underline">ZABRANJENI: Aspirin, Ibuprofen, Ketonal. DOZVOLJEN ISKLJUČIVO: PARACETAMOL!</p>
-            </div>
-            
-            <div class="glass-card p-5">
-                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center border-b pb-3 uppercase"><i class="fa-solid fa-suitcase-medical text-teal-600 mr-2"></i>Ifkina Putna Poliklinika (Original)</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    
-                    <div class="bg-teal-50/30 p-4 rounded-2xl border border-teal-100 shadow-sm">
-                        <h3 class="font-black text-teal-800 mb-3 text-[10px] uppercase tracking-wider border-b border-teal-100 pb-1">Želudac & Probava</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-ugljen" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Aktivni ugljen (kod sumnje na trovanje)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-probiotik" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-bold underline item-text">Probiotici (S. boulardii) - piti 7d prije!</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-seldiar" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Seldiar / Imodium (zaustavljanje proljeva)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-rehidromiks" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium italic item-text">Rehidromiks & <b>Pocari Sweat</b> (kupi tamo!)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-dramina" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Dramina / Đumbir bomboni (za brod)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        </div>
-                    </div>
-
-                    <div class="bg-rose-50/30 p-4 rounded-2xl border border-rose-100 shadow-sm">
-                        <h3 class="font-black text-rose-800 mb-3 text-[10px] uppercase tracking-wider border-b border-rose-100 pb-1">Bolovi, Rane & Alergije</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-bolove" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Tablete za bolove & <b>Paracetamol</b> (Lupocet)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-sprej" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Antiseptik sprej & Tyrosur mast</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-flasteri" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Flasteri, gaze & Claritine (alergija)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-kapi" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Kapi za oči & Krema protiv svrbeža</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        </div>
-                    </div>
-
-                    <div class="bg-blue-50/30 p-4 rounded-2xl border border-blue-100 shadow-sm">
-                        <h3 class="font-black text-blue-800 mb-3 text-[10px] uppercase tracking-wider border-b border-blue-100 pb-1">Vene & Dugi letovi</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-carape" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Kompresivne čarape - Class 1 (za let)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-veno" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Venotonici za noge (gel kesten/loza)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-flavo" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Tablete s flavonoidima (priprema vena)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        </div>
-                    </div>
-
-                    <div class="bg-amber-50/30 p-4 rounded-2xl border border-amber-100 shadow-sm">
-                        <h3 class="font-black text-amber-800 mb-3 text-[10px] uppercase tracking-wider border-b border-amber-100 pb-1">Zaštita & Specijalno</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-komarci" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Tropski sprej protiv komaraca (DEET 30+)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-spf" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">SPF 50+ & Gel nakon sunčanja (Kupi u HR!)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-canesten" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Canesten & Linex Lady (Lady Guard)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                            <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-operil" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium italic underline item-text">Operil / Herplex / Dezinfekcija ruku</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-6 bg-purple-50/30 p-4 rounded-2xl border border-purple-100 shadow-sm">
-                    <h3 class="font-black text-purple-800 mb-3 text-[10px] uppercase tracking-widest border-b border-purple-100 pb-1"><i class="fa-solid fa-pump-soap mr-2"></i>Higijena, Ljepota & Nakit</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-maramice" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Vlažne anti. maramice & Šminka out</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-dezic" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Dezić & Parfem (mini)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-pasta" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Pasta & Četkice & Britvica</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-sapun" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Sapun za tuš & Štapići uši</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-sampon" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Šampon u sapunu & Maska kosu</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-sminka" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Maskara, Ruž, Sjajilo</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-nakit" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Nakit (Osnovno) & Četka</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-kovrce" data-state="0" onclick="toggleState(this)"><span class="text-[10px] text-slate-700 item-text">Oblikovanje kovrča</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                        <div class="flex items-center justify-between p-2 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="med-recepti" data-state="0" onclick="toggleState(this)"><span class="text-[10px] font-black text-rose-600 item-text">REDOVNI LIJEKOVI (RECEPT)!</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="tab-info" class="tab-content">
             <div class="bg-indigo-600 text-white rounded-2xl p-6 mb-5 shadow-lg relative overflow-hidden">
                 <div class="absolute -right-6 -top-6 w-32 h-32 bg-white opacity-10 rounded-full blur-xl"></div>
                 <h2 class="text-lg font-bold mb-2 relative z-10"><i class="fa-solid fa-shield-halved mr-2"></i>Osiguranje UNIQA</h2>
@@ -504,6 +574,14 @@
         }
         
         document.addEventListener("DOMContentLoaded", () => {
+            const activeTab = document.querySelector('.tab-content.active');
+            const activeBtn = document.querySelector('.nav-btn.bg-teal-600');
+            if (!activeTab || !activeBtn) {
+                const defaultBtn = document.querySelector(".nav-btn[onclick*='tab-plan']");
+                if (defaultBtn) {
+                    switchTab('tab-plan', defaultBtn);
+                }
+            }
             renderStates();
         });
 
@@ -518,3 +596,4 @@
     </script>
 </body>
 </html>
+
