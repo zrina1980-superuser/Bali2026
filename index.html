@@ -58,6 +58,7 @@
                         <span class="text-white/25 text-[10px]">|</span>
                         <span class="text-[9px] font-black uppercase tracking-widest text-teal-300/80">BALI</span>
                         <span id="clock-bali" class="text-[12px] font-black text-teal-200 tracking-wider tabular-nums">--:--:--</span>
+                        <span class="text-white/40 text-[8px] font-bold ml-1">GMT+8</span>
                     </div>
                 </div>
         </div>
@@ -78,6 +79,8 @@
             <div class="glass-card p-5 mb-5 border-t-4 border-t-teal-500 bg-teal-50/30">
                 <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center border-b border-teal-100 pb-3 uppercase"><i class="fa-solid fa-list-check text-teal-600 mr-2"></i>Zadnjih 9 dana (Checklist)</h2>
                 <div class="space-y-2">
+                    <div class="flex items-center justify-between p-2.5 rounded-lg border border-red-200 bg-red-50 cursor-pointer transition-all pharmacy-item" data-id="preflight-izleti" data-state="0" onclick="toggleState(this)"><span class="text-xs text-red-700 font-black item-text">POTVRDI IZLETE AGENCIJI (Do petka 01.05. u 14:00h!)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
+                    <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="preflight-arrival" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-bold text-rose-600 item-text">Ispuni All Indonesia Arrival Card (Max 72h prije)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
                     <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="preflight-airalo" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Download Airalo eSIM</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
                     <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="preflight-pdf" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Print backup documents to PDF</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
                     <div class="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 bg-white cursor-pointer transition-all pharmacy-item" data-id="preflight-passport" data-state="0" onclick="toggleState(this)"><span class="text-xs text-slate-700 font-medium item-text">Check Passport validity (min 6 months)</span><span class="status-badge text-[9px] uppercase font-black px-2 py-1 rounded transition-all"></span></div>
@@ -106,7 +109,7 @@
                         <div class="absolute w-4 h-4 bg-slate-400 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
                         <span class="text-[9px] font-black text-slate-500 uppercase bg-slate-100 px-2 py-1 rounded mb-1 inline-block">Dan 1 | 06.05.</span>
                         <h3 class="font-bold text-sm text-slate-800">Polazak iz ZG <span class="text-[9px] text-slate-400 font-normal uppercase border border-slate-200 px-1 rounded ml-1">[Transport]</span></h3>
-                        <p class="text-[11px] text-slate-600 mt-1">Let ZAG-IST u 20:00. Očekujte uzbuđenje i dug let prema istoku.</p>
+                        <p class="text-[11px] text-slate-600 mt-1">Okupljanje u <b>17:50h</b> (Kafić Cakes&Bakes, 1. kat). Čeka vas vodič Niko. Let ZAG-IST u 20:20h.</p>
                     </div>
 
                     <div class="pl-6 relative">
@@ -139,7 +142,7 @@
                         <span class="text-[9px] font-black text-emerald-600 uppercase bg-emerald-50 px-2 py-1 rounded mb-1 inline-block">Dan 5 | 10.05.</span>
                         <h3 class="font-bold text-sm text-emerald-800">Duhovni Istok <span class="text-[9px] text-emerald-600 font-normal uppercase border border-emerald-200 px-1 rounded ml-1">[Kultura/Plaža]</span></h3>
                         <p class="text-[11px] text-slate-600 mt-1">Majke hram Besakih na vulkanu, vodena palača Tirtagangga i Virgin Beach.<br>
-                        <span class="text-slate-500 block"><b>Što očekivati:</b> Sarong je obavezan u hramu. Puno hodanja.</span>
+                        <span class="text-slate-500 block"><b>Što očekivati:</b> Sarong je obavezan u hramu. U Tirtaganggi je dozvoljeno kupanje i hranjenje šarana! <b>Napomena:</b> Ručak na izletu se plaća dodatno.</span>
                         <span class="text-indigo-600 font-bold block"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Odraz u vodi (Tirtagangga) i Besakih stepenice.</span>
                         <span class="text-rose-500 font-bold block"><i class="fa-solid fa-drone mr-1"></i> DRONE ALERT: Zabranjeno kod hramova, ali idealno iznad Virgin Beacha.</span></p>
                     </div>
@@ -147,9 +150,9 @@
                     <div class="pl-6 relative">
                         <div class="absolute w-4 h-4 bg-emerald-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
                         <span class="text-[9px] font-black text-emerald-600 uppercase bg-emerald-50 px-2 py-1 rounded mb-1 inline-block">Dan 6 | 11.05.</span>
-                        <h3 class="font-bold text-sm text-emerald-800">Adrenalin & Majmuni <span class="text-[9px] text-emerald-600 font-normal uppercase border border-emerald-200 px-1 rounded ml-1">[Akcija]</span></h3>
-                        <p class="text-[11px] text-slate-600 mt-1">Rafting rijekom Ayung i poznata šuma majmuna u Ubudu.<br>
-                        <span class="text-slate-500 block"><b>Što očekivati:</b> Bit ćete potpuno mokri od raftinga. Majmuni su brzi lopovi!</span>
+                        <h3 class="font-bold text-sm text-emerald-800">Sela, Ptice, Majmuni & Rafting <span class="text-[9px] text-emerald-600 font-normal uppercase border border-emerald-200 px-1 rounded ml-1">[Akcija/Kultura]</span></h3>
+                        <p class="text-[11px] text-slate-600 mt-1">Posjet selu Batuan, Parku ptica, šumi majmuna te rafting rijekom Ayung.<br>
+                        <span class="text-slate-500 block"><b>Što očekivati:</b> Bogat dan! Majmuni su brzi lopovi, a na raftingu ćete biti potpuno mokri.</span>
                         <span class="text-indigo-600 font-bold block"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Selfie s majmunom (drži mobitel čvrsto!).</span>
                         <span class="text-rose-500 font-bold block"><i class="fa-solid fa-drone mr-1"></i> DRONE ALERT: Strogo zabranjeno u šumi majmuna.</span></p>
                     </div>
@@ -193,8 +196,8 @@
                         <div class="absolute w-4 h-4 bg-pink-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
                         <span class="text-[9px] font-black text-pink-600 uppercase bg-pink-50 px-2 py-1 rounded mb-1 inline-block"><i class="fa-solid fa-cake-candles mr-1"></i> Dan 11 | 16.05.</span>
                         <h3 class="font-bold text-sm text-pink-700">Rođendan, Hram & Party <span class="text-[9px] text-pink-600 font-normal uppercase border border-pink-200 px-1 rounded ml-1">[Proslava]</span></h3>
-                        <p class="text-[11px] text-slate-600 mt-1">Legendarni Tanah Lot u moru, a zatim proslava u Finns Beach Clubu.<br>
-                        <span class="text-slate-500 block"><b>Što očekivati:</b> Gužvu kod hrama, glasnu glazbu i ludilo u Finnsu.</span>
+                        <p class="text-[11px] text-slate-600 mt-1">Legendarni Tanah Lot u moru, Vrt začina (degustacija Kopi Luwak kave) i proslava u Finns Beach Clubu.<br>
+                        <span class="text-slate-500 block"><b>Što očekivati:</b> Gužvu kod hrama, isprobavanje najskuplje kave na svijetu i ludilo u Finnsu.</span>
                         <span class="text-pink-600 font-bold block"><i class="fa-solid fa-star mr-1"></i> IFKIN 40. ROĐENDAN PRE-PARTY: Rezerviraj VIP krevet prije 13h!</span>
                         <span class="text-rose-500 font-bold block"><i class="fa-solid fa-drone mr-1"></i> DRONE ALERT: Dozvoljeno izdaleka na obali kod Tanah Lota.</span></p>
                     </div>
@@ -213,8 +216,8 @@
                         <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
                         <span class="text-[9px] font-black text-orange-600 uppercase bg-orange-50 px-2 py-1 rounded mb-1 inline-block">Dan 13 | 18.05.</span>
                         <h3 class="font-bold text-sm text-orange-800">Luksuz & Jimbaran <span class="text-[9px] text-orange-600 font-normal uppercase border border-orange-200 px-1 rounded ml-1">[Priroda/Gastro]</span></h3>
-                        <p class="text-[11px] text-slate-600 mt-1">Bogatstvo Nusa Due, plovidba čamcima s prozirnim dnom i morska večera na pijesku.<br>
-                        <span class="text-slate-500 block"><b>Što očekivati:</b> Svježa morska hrana na roštilju od kokosovih ljuski pod zvijezdama.</span>
+                        <p class="text-[11px] text-slate-600 mt-1">Bogatstvo Nusa Due, plovidba čamcima s prozirnim dnom i morska večera na pijesku Jimbarana.<br>
+                        <span class="text-slate-500 block"><b>Što očekivati:</b> Svježa morska hrana na pijesku pod zvijezdama. <b>Napomena:</b> Piće na večeri i ležaljke plaćaju se dodatno!</span>
                         <span class="text-indigo-600 font-bold block"><i class="fa-solid fa-camera mr-1"></i> PHOTO OP: Romantična večera uz svijeće drito na pijesku.</span></p>
                     </div>
 
@@ -470,9 +473,11 @@
                 <div class="absolute -right-4 -top-4 text-7xl opacity-10"><i class="fa-solid fa-rocket"></i></div>
                 <h2 class="text-lg font-extrabold mb-4 text-teal-400 flex items-center uppercase tracking-widest font-black"><i class="fa-solid fa-clock-rotate-left mr-2"></i>Time Warp Analiza</h2>
                 <div class="mb-4 p-3 bg-white/5 border border-white/10 rounded-xl text-[11px] leading-relaxed">
-                    <p><span class="font-bold text-teal-300">Brojevi letova:</span> ZAG ➔ IST: TK1056 | IST ➔ CGK: TK56 | CGK ➔ DPS: ID6380</p>
-                    <p><span class="font-bold text-teal-300">Prtljaga:</span> 30kg predana / 8kg ručna</p>
-                    <p><span class="font-bold text-teal-300">PNR (Šifra rezervacije):</span> [UPIŠI ŠESTEROZNAMENKASTI KOD]</p>
+                    <p><span class="font-bold text-teal-300">Letovi (Tamo):</span> TK1056 (ZAG) ➔ TK56 (IST) ➔ QZ802 (CGK)</p>
+                    <p><span class="font-bold text-teal-300">Letovi (Natrag):</span> IP109 (DPS) ➔ TK57 (CGK) ➔ TK1053 (IST)</p>
+                    <p><span class="font-bold text-teal-300">Prtljaga (Turkish):</span> 30kg predana / 8kg ručna</p>
+                    <p><span class="font-bold text-rose-400">Prtljaga (Lokalni let):</span> 20kg predana / 7kg ručna (Oprez!)</p>
+                    <p><span class="font-bold text-teal-300">PNR:</span> [Čeka se od agencije]</p>
                 </div>
                 
                 <div class="space-y-4">
@@ -495,19 +500,19 @@
                                 <tbody class="divide-y divide-white/5">
                                     <tr>
                                         <td class="py-1.5 font-medium text-white">ZAG ➔ IST</td>
-                                        <td class="py-1.5">20:00 ➔ 23:15</td>
-                                        <td class="py-1.5 text-right">2h 15m</td>
-                                        <td class="py-1.5 text-right"><span class="warp-badge warp-red">+3h 15m</span></td>
+                                        <td class="py-1.5">20:20 ➔ 23:40</td>
+                                        <td class="py-1.5 text-right">2h 20m</td>
+                                        <td class="py-1.5 text-right"><span class="warp-badge warp-red">+3h 20m</span></td>
                                     </tr>
                                     <tr>
                                         <td class="py-1.5 font-medium text-white">IST ➔ CGK</td>
-                                        <td class="py-1.5">02:20 ➔ 17:55</td>
-                                        <td class="py-1.5 text-right">11h 35m</td>
-                                        <td class="py-1.5 text-right"><span class="warp-badge warp-red">+15h 35m</span></td>
+                                        <td class="py-1.5">01:55 ➔ 17:35</td>
+                                        <td class="py-1.5 text-right">11h 40m</td>
+                                        <td class="py-1.5 text-right"><span class="warp-badge warp-red">+15h 40m</span></td>
                                     </tr>
                                     <tr>
                                         <td class="py-1.5 font-medium text-white">CGK ➔ DPS</td>
-                                        <td class="py-1.5">Jutro ➔ 11:30</td>
+                                        <td class="py-1.5">09:45 ➔ 12:35</td>
                                         <td class="py-1.5 text-right">1h 50m</td>
                                         <td class="py-1.5 text-right"><span class="warp-badge warp-red">+2h 50m</span></td>
                                     </tr>
@@ -535,9 +540,9 @@
                         
                         <div class="p-4">
                             <div class="flex items-center justify-between mb-3 text-xs border-b border-white/10 pb-2">
-                                <span class="text-white/60">Polazak: <strong class="text-white">Večer (20.05.)</strong></span>
+                                <span class="text-white/60">Polazak: <strong class="text-white">15:35 (20.05.)</strong></span>
                                 <i class="fa-solid fa-arrow-right text-white/30"></i>
-                                <span class="text-white/60">Dolazak: <strong class="text-white">08:15 (21.05.)</strong></span>
+                                <span class="text-white/60">Dolazak u ZG: <strong class="text-white">08:40 (21.05.)</strong></span>
                             </div>
                             
                             <div class="grid grid-cols-2 gap-2 mb-3">
@@ -577,6 +582,7 @@
             <div class="glass-card p-6">
                 <h2 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-3 uppercase font-black">Online Plaćanja (2-3 dana prije leta)</h2>
                 <div class="space-y-4">
+                    <a href="https://allindonesia.imigrasi.go.id" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-rose-500 text-white py-4 rounded-2xl font-black shadow-lg hover:bg-rose-600 transition-colors uppercase text-sm tracking-widest mb-4"><i class="fa-solid fa-file-signature mr-3 text-xl"></i>Arrival Card (Max 72h prije)</a>
                     <a href="https://indonesia-arrival.com/register/apply?gad_source=1&gad_campaignid=23161203811" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-amber-500 text-white py-4 rounded-2xl font-black shadow-lg hover:bg-amber-600 transition-colors uppercase text-sm tracking-widest"><i class="fa-solid fa-passport mr-3 text-xl"></i>Plati e-Vizu (e-VoA)</a>
                     <a href="https://lovebali.baliprov.go.id/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full bg-emerald-600 text-white py-4 rounded-2xl font-black shadow-lg hover:bg-emerald-700 transition-colors uppercase text-sm tracking-widest"><i class="fa-solid fa-leaf mr-3 text-xl"></i>LoveBali Taksa</a>
                 </div>
@@ -616,10 +622,32 @@
                 </div>
             </div>
 
+            <div class="glass-card p-5 mb-5 border-t-4 border-t-red-500 bg-red-50/30">
+                <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center border-b border-red-100 pb-3 uppercase"><i class="fa-solid fa-exclamation-triangle text-red-500 mr-2"></i>Izlazni Dokumenti (KRITIČNO!)</h2>
+                <div class="bg-white p-4 rounded-xl border border-red-100 shadow-sm text-sm text-slate-700 leading-relaxed">
+                    <p class="mb-3"><b>Obavezno čuvajte sve dokumentoprimljene pri ulazu u zemlju!</b></p>
+                    <p class="text-red-700 font-bold">Ako prilikom izlaska iz Indonezije nemate dokumente koje ste dobili pri ulazu (npr. exit card, stamp ili bilo koji papir), granične vlasti mogu:</p>
+                    <ul class="text-red-700 mt-2 space-y-1 list-disc pl-5">
+                        <li>Naplatiti visoku kaznu</li>
+                        <li>Onemogućiti vam ukrcaj na let</li>
+                    </ul>
+                    <p class="mt-3 text-slate-600">Preporuka: Čuvajte sve dokumente zajedno s putovnicom do kraja putovanja!</p>
+                </div>
+            </div>
+
             <div class="glass-card p-5 border-t-4 border-t-indigo-500 bg-indigo-50/30">
                 <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center border-b border-indigo-100 pb-3 uppercase"><i class="fa-solid fa-passport text-indigo-500 mr-2"></i>Kopije Putovnica</h2>
                 <div class="bg-white p-4 rounded-xl border border-indigo-100 shadow-sm text-sm text-slate-700 leading-relaxed">
                     <p><b>Obavezno:</b> imajte PDF kopiju putovnica na mobitelu, jednu offline kopiju u emailu i jednu isprintanu kopiju odvojeno od originala.</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-5 border-t-4 border-t-pink-500 bg-pink-50/30">
+                <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center border-b border-pink-100 pb-3 uppercase"><i class="fa-solid fa-camera text-pink-500 mr-2"></i>Instagram Sharing</h2>
+                <div class="bg-white p-4 rounded-xl border border-pink-100 shadow-sm text-sm text-slate-700 leading-relaxed space-y-2">
+                    <p><b>Podijelite vaš provod s nama!</b> Označite @jungletribehr i koristite hashtag:</p>
+                    <p class="font-mono bg-pink-50 p-2 rounded text-center text-pink-700 font-bold">#junglefotograf</p>
+                    <p class="text-xs text-slate-600 mt-3">Također možete poslati fotografije i videe na <a href="mailto:kontakt@jungletribe.hr" class="text-pink-600 underline">kontakt@jungletribe.hr</a></p>
                 </div>
             </div>
         </section>
@@ -638,7 +666,7 @@
 
         // Pametni Timer (Fiksna Zona Zagreb - UTC+2)
         function updateCountdown() {
-            const departureDate = new Date('2026-05-06T18:00:00+02:00').getTime();
+            const departureDate = new Date('2026-05-06T17:50:00+02:00').getTime();
             const now = new Date().getTime();
             const badge = document.getElementById('countdown-badge');
 
